@@ -1,8 +1,5 @@
 <script setup lang="ts">
 import { product_detailp, kitchenp, mattrassp, bedroomp, product_chairp, product_sofap } from '@/constants/assets';
-
-
-import { SplideTrack } from '@splidejs/vue-splide'
 import ProductCard from '@components/ProductCard.vue';
 const newArrivals = [
     {

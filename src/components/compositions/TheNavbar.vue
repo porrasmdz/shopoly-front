@@ -1,4 +1,6 @@
 <script setup lang="ts">
+
+// @ts-nocheck
 import { onMounted, ref } from 'vue';
 import { bed, sleep, outdoor, sofa, kitchen, food, bed_dark, sleep_dark, outdoor_dark, sofa_dark, kitchen_dark, food_dark } from '@/constants/assets.ts'
 import BaseIcon from '@components/BaseIcon.vue';

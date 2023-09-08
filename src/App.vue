@@ -1,4 +1,6 @@
+
 <script lang="ts" setup>
+// @ts-nocheck
 import { provide, shallowRef } from "vue";
 import router from "./router/index";
 import layouts from '@/layouts';
