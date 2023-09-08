@@ -64,7 +64,15 @@
         <GroupedLinks v-for="(group,index) in footerGroups" :key="`${group.title}-${index}`" :title="group.title" :links="group.links" />
 
       </div>
+      
     </footer>
     <!-- /Desktop Footer  -->
-
+    <section class="h-11 bg-amber-400 dark:text-black">
+      <div
+        class="mx-auto flex max-w-[1200px] items-center justify-between px-4 pt-2"
+      >
+        <p>&copy; Shopoly, 2023</p>
+       
+      </div>
+    </section>
 </template>

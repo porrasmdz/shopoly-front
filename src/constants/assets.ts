@@ -30,6 +30,11 @@ import product_bigsofa_p from "../assets/images/product-bigsofa.png"
 import product_chair_p from "../assets/images/product-chair.png"
 import product_sofa_p from "../assets/images/product-sofa.png"
 import sale_bage_p from "../assets/images/sale-bage.jpeg"
+import about_us_bg from "../assets/images/about-us-bg.jpeg"
+import contact_bg from "../assets/images/contact-bg.jpeg"
+import mission_family_p from "../assets/images/mission-family.jpg"
+import mission_interior_p from "../assets/images/mission-interior.jpg"
+import mission_materials_p from "../assets/images/mission-materials.jpg"
 
 export const logo_dark = logo_dark_i;
 export const logo_light = logo_light_i;
@@ -61,3 +66,8 @@ export const mattrassp = mattrass_p;
 export const product_chairp = product_chair_p;
 export const product_sofap = product_sofa_p;
 export const sale_bagep = sale_bage_p;
+export const about_bg = about_us_bg;
+export const mission_familyp = mission_family_p;
+export const mission_interiorp = mission_interior_p;
+export const mission_materialsp = mission_materials_p;
+export const contactbg = contact_bg;

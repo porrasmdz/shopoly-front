@@ -7,6 +7,7 @@ import {  RouteLocationNormalized } from "vue-router";
   const layout = shallowRef('div');
 
   router.afterEach((to: RouteLocationNormalized) => {
+      window.scrollTo(0,0);
       let key = to.meta.layout;  
       layout.value = layouts[key] || 'div';
     });
