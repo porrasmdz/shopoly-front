@@ -8,7 +8,7 @@ import TheFooter from '@/components/compositions/TheFooter.vue';
         
     <TheHeader />
     <TheNavbar />
-    <main class="mx-auto grid grid-cols-12 h-[90vh]">
+    <main class="mx-auto grid grid-cols-12 min-h-[90vh]">
         
         <slot ></slot>
     </main>
