@@ -12,6 +12,12 @@ import outdoor_dark_i from "../assets/images/outdoor-dark.svg"
 import sofa_dark_i from "../assets/images/sofa-dark.svg"
 import kitchen_dark_i from "../assets/images/kitchen-dark.svg"
 import food_dark_i from "../assets/images/food-dark.svg"
+import github_dark_i from "../assets/images/github-dark.svg"
+import telegram_dark_i from "../assets/images/telegram-dark.svg"
+import linkedin_dark_i from "../assets/images/linkedin-dark.svg"
+import github_i from "../assets/images/github.svg"
+import telegram_i from "../assets/images/telegram.svg"
+import linkedin_i from "../assets/images/linkedin.svg"
 
 export const logo_dark = logo_dark_i;
 export const logo_light = logo_light_i;
@@ -21,9 +27,15 @@ export const outdoor = outdoor_i;
 export const sofa = sofa_i;
 export const kitchen = kitchen_i;
 export const food = food_i;
+export const food_dark = food_dark_i;
 export const bed_dark = bed_dark_i;
 export const sleep_dark = sleep_dark_i;
 export const outdoor_dark = outdoor_dark_i;
 export const sofa_dark = sofa_dark_i;
 export const kitchen_dark = kitchen_dark_i;
-export const food_dark = food_dark_i;
+export const github_dark = github_dark_i;
+export const telegram_dark = telegram_dark_i;
+export const linkedin_dark = linkedin_dark_i;
+export const github = github_i;
+export const telegram = telegram_i;
+export const linkedin = linkedin_i;

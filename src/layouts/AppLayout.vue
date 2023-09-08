@@ -2,15 +2,17 @@
 
 import TheHeader from '@/components/compositions/TheHeader.vue';
 import TheNavbar from '@/components/compositions/TheNavbar.vue';
+import TheFooter from '@/components/compositions/TheFooter.vue';
 </script>
 <template>
-    <div class="relative">
         
     <TheHeader />
     <TheNavbar />
-    <main class="mx-auto grid grid-cols-12 ">
+    <main class="mx-auto grid grid-cols-12 h-[90vh]">
         
         <slot ></slot>
     </main>
-    </div>
+    <TheFooter />
+    
+
 </template>
