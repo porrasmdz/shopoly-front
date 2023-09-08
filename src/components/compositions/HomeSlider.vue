@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { product_detailp, kitchenp, mattrassp, bedroomp, product_chairp, product_sofap } from '@/constants/assets';
-import BaseIcon from '@components/BaseIcon.vue';
+
 
 import { SplideTrack } from '@splidejs/vue-splide'
-import BaseButton from '@components/BaseButton.vue';
+import ProductCard from '@components/ProductCard.vue';
 const newArrivals = [
     {
         image: product_detailp,
@@ -83,38 +83,7 @@ const options = {
         <SplideTrack  class="mx-auto max-w-[1200px]">
           <!-- 1 -->
           <SplideSlide v-for="product in newArrivals" :key="`${product.name}-${product.price}`"  >
-            <div class="flex flex-col">
-              <img
-                class=""
-                :src="product.image"
-                :alt="`${product.name} image`"
-              />
-
-              <div>
-                <p class="mt-2 text-black dark:text-white uppercase">{{ product.name }}</p>
-                <p class="font-medium text-violet-900">
-                  <span>
-                    ${{  (product.price - product.discount).toFixed(2) }}
-                  </span>
-                  <span class="ml-1 text-sm text-gray-500 line-through"
-                    >${{ product.price.toFixed(2) }}</span
-                  >
-                </p>
-
-                <div class="flex items-center">
-                  <BaseIcon icon="star-filled" v-for="star in product.stars" :key="`${product.name}-star-${star}`"/>
-                  <BaseIcon icon="star-empty" v-for="star in (5-product.stars)" :key="`${product.name}-emptystar-${star}`"/>
-                  
-                  <p class="text-sm text-gray-400">({{ product.reviews }})</p>
-                </div>
-
-                <div>
-                  <BaseButton type="secondary" class="my-5 h-10 w-full text-white">
-                    Add to cart
-                  </BaseButton>
-                </div>
-              </div>
-            </div>
+            <ProductCard :product="product"/>
           </SplideSlide>
 
          
