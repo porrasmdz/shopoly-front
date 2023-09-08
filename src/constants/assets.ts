@@ -27,6 +27,9 @@ import mattrass_p from "../assets/images/matrass.png"
 import outdoors_p from "../assets/images/outdoors.png"
 import product_bigsofa_p from "../assets/images/product-bigsofa.png"
 
+import product_chair_p from "../assets/images/product-chair.png"
+import product_sofa_p from "../assets/images/product-sofa.png"
+
 export const logo_dark = logo_dark_i;
 export const logo_light = logo_light_i;
 export const bed = bed_i;
@@ -54,3 +57,5 @@ export const living_roomp = living_room_p;
 export const outdoorp = outdoors_p;
 export const product_detailp = product_bigsofa_p;
 export const mattrassp = mattrass_p;
+export const product_chairp = product_chair_p;
+export const product_sofap = product_sofa_p;

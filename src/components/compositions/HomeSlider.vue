@@ -1,0 +1,124 @@
+<script setup lang="ts">
+import { product_detailp, kitchenp, mattrassp, bedroomp, product_chairp, product_sofap } from '@/constants/assets';
+import BaseIcon from '@components/BaseIcon.vue';
+
+import { SplideTrack } from '@splidejs/vue-splide'
+import BaseButton from '@components/BaseButton.vue';
+const newArrivals = [
+    {
+        image: product_detailp,
+        name: 'Guyer Chair',
+        price: 500.00,
+        discount: 455.00,
+        stars: 4,
+        reviews: 38
+    },
+    {
+        image: product_chairp,
+        name: 'Purple Chair',
+        price: 500.00,
+        discount: 355.00,
+        stars: 2,
+        reviews: 58
+    },
+    {
+        image: product_sofap,
+        name: 'Large Sofa',
+        price: 200.00,
+        discount: 55.00,
+        stars: 5,
+        reviews: 92
+    },
+    {
+        image: kitchenp,
+        name: 'Perfecto Kitchen',
+        price: 500.00,
+        discount: 55.00,
+        stars: 4,
+        reviews: 158
+    },
+    {
+        image: mattrassp,
+        name: 'Matrass Comfort +',
+        price: 80.00,
+        discount: 5.00,
+        stars: 5,
+        reviews: 58
+    },
+    {
+        image: bedroomp,
+        name: 'Queen Size Bed',
+        price: 500.00,
+        discount: 355.00,
+        stars: 3,
+        reviews: 58
+    }
+]
+
+const options = {
+    type: "loop",
+    focus: 0,
+    gap: "1rem",
+    perPage: 4,
+    width: '100%',
+    pagination:true,
+    breakpoints: {
+      640: {
+        perPage: 2,
+      },
+      480: {
+        perPage: 1,
+      },
+    },
+ }
+</script>
+<template>
+    
+   
+    <section class="splide col-span-12 splide mx-auto max-w-[1200px] px-5 py-2"
+      aria-label="Splide Basic HTML"
+    >
+        
+      <Splide :has-track="false" :options="options">
+        <SplideTrack  class="mx-auto max-w-[1200px]">
+          <!-- 1 -->
+          <SplideSlide v-for="product in newArrivals" :key="`${product.name}-${product.price}`"  >
+            <div class="flex flex-col">
+              <img
+                class=""
+                :src="product.image"
+                :alt="`${product.name} image`"
+              />
+
+              <div>
+                <p class="mt-2 text-black dark:text-white uppercase">{{ product.name }}</p>
+                <p class="font-medium text-violet-900">
+                  <span>
+                    ${{  (product.price - product.discount).toFixed(2) }}
+                  </span>
+                  <span class="ml-1 text-sm text-gray-500 line-through"
+                    >${{ product.price.toFixed(2) }}</span
+                  >
+                </p>
+
+                <div class="flex items-center">
+                  <BaseIcon icon="star-filled" v-for="star in product.stars" :key="`${product.name}-star-${star}`"/>
+                  <BaseIcon icon="star-empty" v-for="star in (5-product.stars)" :key="`${product.name}-emptystar-${star}`"/>
+                  
+                  <p class="text-sm text-gray-400">({{ product.reviews }})</p>
+                </div>
+
+                <div>
+                  <BaseButton type="secondary" class="my-5 h-10 w-full text-white">
+                    Add to cart
+                  </BaseButton>
+                </div>
+              </div>
+            </div>
+          </SplideSlide>
+
+         
+        </SplideTrack>
+        </Splide>
+    </section>
+</template>
