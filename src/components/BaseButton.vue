@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
- 
+type ButtonType =  'primary' | 'secondary' | 'tertiary'
 const props = defineProps<{
-    type?:'primary' | 'secondary' | 'tertiary'
+    type?: ButtonType
 }>();
 const buttontheme = computed(()=> {
     if(props.type ==='primary') {

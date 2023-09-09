@@ -4,19 +4,20 @@ import SearchBar from '@components/SearchBar.vue';
 import CompanyLogo from '@components/CompanyLogo.vue';
 
 import { ref } from 'vue';
+import { ILink } from '@/interfaces/ILink';
 
 const mobileMenuOpen = ref(false);
-const headerRoutes = {
-    wishlist: { route: "/wishlist", icon: 'heart', text: "Wishlist" },
-    cart: { route: "/cart", icon: 'cart', text: "Cart" },
-    profile: { route: "/profile", icon: 'profile', text: "Account" }
+const headerRoutes: Record<string, ILink> = {
+    wishlist: { route: "/wishlist", icon: 'heart', name: "Wishlist" },
+    cart: { route: "/cart", icon: 'cart', name: "Cart" },
+    profile: { route: "/profile", icon: 'profile', name: "Account" }
 
 }
-const mobileRoutes = {
-    home: { route: "/", text: "Home" },
-    catalog: { route: "/catalog", text: "Catalog" },
-    about: { route: "/about", text: "About Us" },
-    contact: { route: "/contact", text: "Contact Us" }
+const mobileRoutes: Record<string, ILink> = {
+    home: { route: "/", name: "Home" },
+    catalog: { route: "/catalog", name: "Catalog" },
+    about: { route: "/about", name: "About Us" },
+    contact: { route: "/contact", name: "Contact Us" }
 
 }
 
@@ -44,10 +45,10 @@ const mobileRoutes = {
                     <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75"></span>
                     <span class="relative inline-flex h-2 w-2 rounded-full bg-red-500"></span>
                 </span>
-                <BaseIcon :icon="option.icon" />
+                <BaseIcon :icon="option.icon ?? 'profile'" />
 
 
-                <p class="text-xs">{{ option.text }}</p>
+                <p class="text-xs">{{ option.name }}</p>
             </router-link>
         </div>
     </header>
@@ -66,9 +67,9 @@ const mobileRoutes = {
                             class="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75"></span>
                         <span class="relative inline-flex h-2 w-2 rounded-full bg-red-500"></span>
                     </span>
-                    <BaseIcon :icon="option.icon" />
+                    <BaseIcon :icon="option.icon ?? 'profile'" />
 
-                    <p class="text-xs">{{ option.text }}</p>
+                    <p class="text-xs">{{ option.name }}</p>
                 </router-link>
             </div>
             <SearchBar class="my-4 mx-5" />
@@ -76,7 +77,7 @@ const mobileRoutes = {
             <ul class="text-center font-medium">
                 <li v-for="(option, index) in mobileRoutes" @click="mobileMenuOpen = false"
                     :key="`${option.route}-${index}`" class="py-2">
-                    <router-link :to="option.route">{{ option.text }}</router-link>
+                    <router-link :to="option.route">{{ option.name }}</router-link>
                 </li>
 
             </ul>

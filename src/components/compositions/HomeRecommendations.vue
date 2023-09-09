@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import {product_chairp, product_sofap, kitchenp, living_roomp, bedroomp, header_bg,outdoorp, product_detailp } from '@/constants/assets'
+import { IProduct } from '@/interfaces/IProduct';
 import ProductCard from '@components/ProductCard.vue';
-const recommendedProducts = [
+const recommendedProducts: (IProduct)[] = [
     {
         image: product_chairp,
         name: 'Chair',

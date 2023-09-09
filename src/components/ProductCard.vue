@@ -1,15 +1,9 @@
 <script setup lang="ts">
+import { IProduct } from "@/interfaces/IProduct.ts";
 import BaseIcon from '@components/BaseIcon.vue';
 import BaseButton from '@components/BaseButton.vue';
 defineProps<{
-  product: {
-    image: string,
-    name: string,
-    price: number,
-    discount: number,
-    stars: number,
-    reviews: number
-  }
+  product: IProduct
 }>()
 </script>
 <template>

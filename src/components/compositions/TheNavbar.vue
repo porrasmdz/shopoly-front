@@ -5,11 +5,12 @@ import { onMounted, ref } from 'vue';
 import { bed, sleep, outdoor, sofa, kitchen, food, bed_dark, sleep_dark, outdoor_dark, sofa_dark, kitchen_dark, food_dark } from '@/constants/assets.ts'
 import BaseIcon from '@components/BaseIcon.vue';
 import BaseButton from '@components/BaseButton.vue';
+import { ILink } from '@/interfaces/ILink';
 
 const desktopMenuOpen = ref(false);
 const activeCategory = ref<'bedroomc' | 'mattrassc' | 'outdoorc' | 'sofac' | 'kitchenc' | 'livingc'>("bedroomc")
 
-const navRoutes = {
+const navRoutes: Record<string, ILink> = {
     home: { route: "/", text: "Home" },
     catalog: { route: "/catalog", text: "Catalog" },
     about: { route: "/about", text: "About Us" },

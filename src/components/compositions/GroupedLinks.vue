@@ -1,10 +1,9 @@
 <script setup lang="ts">
+import { ILink } from "@/interfaces/ILink.ts";
+
 defineProps<{
     title?: string,
-    links: ({
-        route: string,
-        name: string
-    })[]
+    links: (ILink)[]
 }>();
 </script>
 <template>

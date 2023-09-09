@@ -4,8 +4,9 @@
 import { logo_light, logo_dark } from "@/constants/assets.ts"
 import { computed } from "vue";
 
+type Size = 'auto' | 'lg'
 const props = defineProps<{
-    size?: 'auto' | 'lg'
+    size?: Size
 }>()
 
 const isDarkMode = () => {
