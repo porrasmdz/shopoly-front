@@ -135,7 +135,7 @@ import { avatarp } from '@/constants/assets';
                 <div class="py-5">
                     <div class="flex items-center">
                         <img width="40px" height="40px" class="rounded-full object-cover"
-                            src="./assets/images/avatar-photo.png" alt="Red woman portrait" />
+                            :src="avatarp" alt="Red woman portrait" />
                         <div class="ml-5">
                             <p class="font-medium text-gray-500">Hello,</p>
                             <p class="font-bold">Sarah Johnson</p>
