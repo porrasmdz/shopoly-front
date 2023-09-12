@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import BaseIcon from '@components/BaseIcon.vue';
+import { useRoute } from 'vue-router';
 
+const route = useRoute()
 
 </script>
 <template>
@@ -16,7 +18,7 @@ import BaseIcon from '@components/BaseIcon.vue';
         <span class="mx-2 text-gray-500">
           <BaseIcon icon="chevron-right" />
         </span>
-        <span class="text-gray-500">Catalog</span>
+        <span class="text-gray-500">{{route.name}}</span>
 
       </li>
 
