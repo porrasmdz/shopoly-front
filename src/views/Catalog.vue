@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import TheBreadcrumbs from '@/components/compositions/TheBreadcrumbs.vue';
-import CatalogFilters from '@/components/compositions/CatalogFilters.vue';
-import ProductCard from '@/components/ProductCard.vue';
-import GridOptions from '@components/compositions/GridOptions.vue'
+import CatalogTable from '@/components/compositions/CatalogTable.vue';
 import { product_chairp, product_sofap, kitchenp, living_roomp, bedroomp, header_bg } from '@/constants/assets';
 import { IProduct } from '@/interfaces/IProduct';
 const catalogProducts: (IProduct)[] = [
@@ -62,22 +60,6 @@ const catalogProducts: (IProduct)[] = [
     <TheBreadcrumbs class="col-span-12" />
 
       <!-- TODO: REFACTOR WHOLE TABLE IN A COMPOSITION COMPONENT -->
-      <section
-        class="col-span-12 w-full container mx-auto flex-grow max-w-[1200px] border-b py-5 lg:flex lg:flex-row lg:py-10"
-      >
-        <CatalogFilters />
-        <div>
-          <!-- Table Filters> -->
-          <GridOptions />
-          <!-- /Table Filters -->
-
-          <section
-            class="mx-auto grid max-w-[1200px] grid-cols-2 gap-3 px-5 pb-10 lg:grid-cols-3"
-          >
-            <ProductCard :product="product" v-for="product in catalogProducts" :key="`catalog-${product.name}`" />
-            
-          </section>
-        </div>
-      </section>
+      <CatalogTable class="col-span-12" :catalog-products="catalogProducts" />
 
 </template>
