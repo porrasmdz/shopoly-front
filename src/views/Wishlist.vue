@@ -7,7 +7,7 @@ import { avatarp, kitchenp, bedroomp, living_roomp, product_chairp } from '@/con
     <nav class="mx-auto w-full mt-4 max-w-[1200px] px-5">
           <ul class="flex items-center">
             <li class="cursor-pointer">
-              <a href="index.html">
+              <router-link to="/">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -21,7 +21,7 @@ import { avatarp, kitchenp, bedroomp, living_roomp, product_chairp } from '@/con
                     d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z"
                   />
                 </svg>
-              </a>
+              </router-link>
             </li>
             <li>
               <span class="mx-2 text-gray-500">&gt;</span>
@@ -56,8 +56,8 @@ import { avatarp, kitchenp, bedroomp, living_roomp, product_chairp } from '@/con
             <div class="w-full">
               <div class="flex w-full">
                 <div class="flex flex-col gap-2">
-                  <a
-                    href="account-page.html"
+                  <router-link
+                    to="/account-page"
                     class="flex items-center gap-2 font-medium active:text-violet-900"
                   >
                     <svg
@@ -74,22 +74,22 @@ import { avatarp, kitchenp, bedroomp, living_roomp, product_chairp } from '@/con
                         d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z"
                       />
                     </svg>
-                    Manage account</a
+                    Manage account</router-link
                   >
-                  <a
-                    href="profile-information.html"
+                  <router-link
+                    to="/profile-information"
                     class="text-gray-500 duration-100 hover:text-yellow-400"
-                    >Profile information</a
+                    >Profile information</router-link
                   >
-                  <a
-                    href="manage-address.html"
+                  <router-link
+                    to="/manage-address"
                     class="text-gray-500 duration-100 hover:text-yellow-400"
-                    >Manage Addresses</a
+                    >Manage Addresses</router-link
                   >
-                  <a
-                    href="change-password.html"
+                  <router-link
+                    to="/change-password"
                     class="text-gray-500 duration-100 hover:text-yellow-400"
-                    >Change password</a
+                    >Change password</router-link
                   >
                 </div>
               </div>
@@ -99,8 +99,8 @@ import { avatarp, kitchenp, bedroomp, living_roomp, product_chairp } from '@/con
           <div class="flex border-b py-5">
             <div class="flex w-full">
               <div class="flex flex-col gap-2">
-                <a
-                  href="my-order-history.html"
+                <router-link
+                  to="/my-order-history"
                   class="flex items-center gap-2 font-medium active:text-violet-900"
                 >
                   <svg
@@ -119,7 +119,7 @@ import { avatarp, kitchenp, bedroomp, living_roomp, product_chairp } from '@/con
                     />
                   </svg>
 
-                  My Order History</a
+                  My Order History</router-link
                 >
               </div>
             </div>
@@ -128,8 +128,8 @@ import { avatarp, kitchenp, bedroomp, living_roomp, product_chairp } from '@/con
           <div class="flex border-b py-5">
             <div class="flex w-full">
               <div class="flex flex-col gap-2">
-                <a
-                  href="payment-methods.html"
+                <router-link
+                  to="/payment-methods"
                   class="flex items-center gap-2 font-medium active:text-violet-900"
                 >
                   <svg
@@ -147,7 +147,7 @@ import { avatarp, kitchenp, bedroomp, living_roomp, product_chairp } from '@/con
                     />
                   </svg>
 
-                  Payment Methods</a
+                  Payment Methods</router-link
                 >
               </div>
             </div>
@@ -156,8 +156,8 @@ import { avatarp, kitchenp, bedroomp, living_roomp, product_chairp } from '@/con
           <div class="flex border-b py-5">
             <div class="flex w-full">
               <div class="flex flex-col gap-2">
-                <a
-                  href="wishlist.html"
+                <router-link
+                  to="/wishlist"
                   class="flex items-center gap-2 font-medium text-violet-900"
                 >
                   <svg
@@ -175,7 +175,7 @@ import { avatarp, kitchenp, bedroomp, living_roomp, product_chairp } from '@/con
                     />
                   </svg>
 
-                  My Wishlist</a
+                  My Wishlist</router-link
                 >
               </div>
             </div>
@@ -184,8 +184,8 @@ import { avatarp, kitchenp, bedroomp, living_roomp, product_chairp } from '@/con
           <div class="flex py-5">
             <div class="flex w-full">
               <div class="flex flex-col gap-2">
-                <a
-                  href="#"
+                <router-link
+                  to="#"
                   class="flex items-center gap-2 font-medium active:text-violet-900"
                 >
                   <svg
@@ -203,7 +203,7 @@ import { avatarp, kitchenp, bedroomp, living_roomp, product_chairp } from '@/con
                     />
                   </svg>
 
-                  Log Out</a
+                  Log Out</router-link
                 >
               </div>
             </div>

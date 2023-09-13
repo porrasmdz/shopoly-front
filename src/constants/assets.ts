@@ -36,6 +36,7 @@ import mission_family_p from "../assets/images/mission-family.jpg"
 import mission_interior_p from "../assets/images/mission-interior.jpg"
 import mission_materials_p from "../assets/images/mission-materials.jpg"
 import avatar_p from "../assets/images/avatar-photo.png"
+import patrick_s from "../assets/images/patrick.png"
 
 export const logo_dark = logo_dark_i;
 export const logo_light = logo_light_i;
@@ -73,3 +74,4 @@ export const mission_interiorp = mission_interior_p;
 export const mission_materialsp = mission_materials_p;
 export const contactbg = contact_bg;
 export const avatarp = avatar_p;
+export const patrick = patrick_s

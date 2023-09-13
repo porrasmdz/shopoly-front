@@ -8,14 +8,14 @@ import { avatarp } from '@/constants/assets';
         <nav class="mx-auto w-full mt-4 max-w-[1200px] px-5">
             <ul class="flex items-center">
                 <li class="cursor-pointer">
-                    <a href="index.html">
+                    <router-link to="/">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
                             <path
                                 d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
                             <path
                                 d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
                         </svg>
-                    </a>
+                    </router-link>
                 </li>
                 <li>
                     <span class="mx-2 text-gray-500">&gt;</span>
@@ -45,20 +45,20 @@ import { avatarp } from '@/constants/assets';
                 <div class="w-full">
                     <div class="flex w-full">
                         <div class="flex flex-col gap-2">
-                            <a href="#" class="flex items-center gap-2 font-medium text-violet-900">
+                            <router-link to="#" class="flex items-center gap-2 font-medium text-violet-900">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                     stroke="currentColor" class="h-5 w-5">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
                                 </svg>
-                                Manage account</a>
-                            <a href="profile-information.html"
+                                Manage account</router-link>
+                            <router-link to="/profile-information"
                                 class="active:blue-900 text-gray-500 duration-100 hover:text-yellow-400">Profile
-                                information</a>
-                            <a href="manage-address.html" class="text-gray-500 duration-100 hover:text-yellow-400">Manage
-                                Addresses</a>
-                            <a href="change-password.html" class="text-gray-500 duration-100 hover:text-yellow-400">Change
-                                password</a>
+                                information</router-link>
+                            <router-link to="/manage-address" class="text-gray-500 duration-100 hover:text-yellow-400">Manage
+                                Addresses</router-link>
+                            <router-link to="/change-password" class="text-gray-500 duration-100 hover:text-yellow-400">Change
+                                password</router-link>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ import { avatarp } from '@/constants/assets';
             <div class="flex border-b py-5">
                 <div class="flex w-full">
                     <div class="flex flex-col gap-2">
-                        <a href="my-order-history.html" class="flex items-center gap-2 font-medium active:text-violet-900">
+                        <router-link to="/my-order-history" class="flex items-center gap-2 font-medium active:text-violet-900">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
                                 <path
                                     d="M3.375 3C2.339 3 1.5 3.84 1.5 4.875v.75c0 1.036.84 1.875 1.875 1.875h17.25c1.035 0 1.875-.84 1.875-1.875v-.75C22.5 3.839 21.66 3 20.625 3H3.375z" />
@@ -76,7 +76,7 @@ import { avatarp } from '@/constants/assets';
                                     clip-rule="evenodd" />
                             </svg>
 
-                            My Order History</a>
+                            My Order History</router-link>
                     </div>
                 </div>
             </div>
@@ -84,14 +84,14 @@ import { avatarp } from '@/constants/assets';
             <div class="flex border-b py-5">
                 <div class="flex w-full">
                     <div class="flex flex-col gap-2">
-                        <a href="payment-methods.html" class="flex items-center gap-2 font-medium active:text-violet-900">
+                        <router-link to="/payment-methods" class="flex items-center gap-2 font-medium active:text-violet-900">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="h-5 w-5">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
                             </svg>
 
-                            Payment Methods</a>
+                            Payment Methods</router-link>
                     </div>
                 </div>
             </div>
@@ -99,14 +99,14 @@ import { avatarp } from '@/constants/assets';
             <div class="flex border-b py-5">
                 <div class="flex w-full">
                     <div class="flex flex-col gap-2">
-                        <a href="wishlist.html" class="flex items-center gap-2 font-medium active:text-violet-900">
+                        <router-link to="/wishlist" class="flex items-center gap-2 font-medium active:text-violet-900">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="h-5 w-5">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                             </svg>
 
-                            My Wishlist</a>
+                            My Wishlist</router-link>
                     </div>
                 </div>
             </div>
@@ -114,14 +114,14 @@ import { avatarp } from '@/constants/assets';
             <div class="flex py-5">
                 <div class="flex w-full">
                     <div class="flex flex-col gap-2">
-                        <a href="#" class="flex items-center gap-2 font-medium active:text-violet-900">
+                        <router-link to="#" class="flex items-center gap-2 font-medium active:text-violet-900">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="h-5 w-5">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
                             </svg>
 
-                            Log Out</a>
+                            Log Out</router-link>
                     </div>
                 </div>
             </div>
@@ -156,7 +156,7 @@ import { avatarp } from '@/constants/assets';
                 <div class="border py-5 shadow-md">
                     <div class="flex justify-between px-4 pb-5">
                         <p class="font-bold">Personal Profile</p>
-                        <a class="text-sm text-violet-900" href="profile-information.html">Edit</a>
+                        <a class="text-sm text-violet-900" href="/profile-information">Edit</a>
                     </div>
 
                     <div class="px-4">
@@ -172,7 +172,7 @@ import { avatarp } from '@/constants/assets';
                 <div class="border py-5 shadow-md">
                     <div class="flex justify-between px-4 pb-5">
                         <p class="font-bold">Shipping Address</p>
-                        <a class="text-sm text-violet-900" href="manage-address.html">Edit</a>
+                        <a class="text-sm text-violet-900" href="/manage-address">Edit</a>
                     </div>
 
                     <div class="px-4">

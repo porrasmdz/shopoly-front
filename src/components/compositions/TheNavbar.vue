@@ -91,6 +91,7 @@ onMounted(() => {
 
             <div class="mx-7 flex gap-8">
                 <router-link v-for="(option, index) in navRoutes" :key="`${option.route}-${index}`"
+                    @click="desktopMenuOpen = false"
                     class="font-light text-white duration-100 hover:text-yellow-400 hover:underline" :to="option.route">
                     {{ option.text }}
                 </router-link>

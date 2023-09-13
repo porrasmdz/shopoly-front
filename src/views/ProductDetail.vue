@@ -1,32 +1,50 @@
 <script setup lang="ts">
+import TheBreadcrumbs from '@/components/compositions/TheBreadcrumbs.vue';
+import RecommendedProducts from '@/components/compositions/RecommendedProducts.vue';
 import { kitchenp, outdoorp, living_roomp, product_detailp, product_chairp,product_sofap } from '@/constants/assets';
+
+import { IProduct } from '@/interfaces/IProduct';
+
+const recommendedProducts: (IProduct)[] = [
+    {
+        image: product_chairp,
+        name: 'Chair',
+        price: 500.00,
+        discount: 455.00,
+        stars: 4,
+        reviews: 38
+    },
+    {
+        image: product_sofap,
+        name: 'Sofa',
+        price: 500.00,
+        discount: 355.00,
+        stars: 2,
+        reviews: 58
+    },
+    {
+        image: kitchenp,
+        name: 'Guyer Kitchen',
+        price: 200.00,
+        discount: 55.00,
+        stars: 5,
+        reviews: 92
+    },
+    {
+        image: living_roomp,
+        name: 'Guyer Room',
+        price: 500.00,
+        discount: 55.00,
+        stars: 4,
+        reviews: 158
+    }
+]
 </script>
 <template>
-    <!-- TODO:REFACTOR -->
     <!-- breadcrumbs  -->
-    <div class="col-span-12">
-        <nav class="mx-auto w-full mt-4 max-w-[1200px] px-5">
-            <ul class="flex items-center">
-                <li class="cursor-pointer">
-                    <a href="index.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
-                            <path
-                                d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
-                            <path
-                                d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <span class="mx-2 text-gray-500">&gt;</span>
-                </li>
+    <TheBreadcrumbs class="col-span-12"/>
 
-                <li class="text-gray-500">Big italian sofa</li>
-            </ul>
-        </nav>
-        <!-- /breadcrumbs  -->
-    </div>
-
+    <!-- TODO: REFACTOR MAKE IMAGE CAROUSEL -->
     <section
         class="col-span-12 w-full container flex-grow mx-auto max-w-[1200px] border-b py-5 lg:grid lg:grid-cols-2 lg:py-10">
         <!-- image gallery -->
@@ -55,7 +73,7 @@ import { kitchenp, outdoorp, living_roomp, product_detailp, product_chairp,produ
         </div>
 
         <!-- description  -->
-
+        <!-- TODO: REFACTOR PRODUCT DESCRIPTIONS -->
         <div class="mx-auto px-5 lg:px-5">
             <h2 class="pt-3 text-2xl font-bold lg:pt-0">BIG ITALIAN SOFA</h2>
             <div class="mt-1">
@@ -184,7 +202,7 @@ import { kitchenp, outdoorp, living_roomp, product_detailp, product_chairp,produ
                     </button>
                 </div>
             </div>
-
+            <!-- TODO: REFACTOR ICONS -->
             <div class="mt-7 flex flex-row items-center gap-6">
                 <button
                     class="flex h-12 w-1/3 items-center justify-center bg-violet-900 text-white duration-100 hover:bg-blue-800">
@@ -209,7 +227,7 @@ import { kitchenp, outdoorp, living_roomp, product_detailp, product_chairp,produ
         </div>
     </section>
 
-    <!-- product details  -->
+    <!-- TODO: REFACTOR -> product details  -->
 
     <section class="col-span-12 w-full container mx-auto max-w-[1200px] px-5 py-5 lg:py-10">
         <h2 class="text-xl">Product details</h2>
@@ -254,253 +272,6 @@ import { kitchenp, outdoorp, living_roomp, product_detailp, product_chairp,produ
     <p class="col-span-12 w-full mx-auto mt-10 mb-5 max-w-[1200px] px-5">RELATED PRODUCTS</p>
 
     <!-- Recommendations -->
-    <section class="col-span-12 w-full container mx-auto grid max-w-[1200px] grid-cols-2 gap-3 px-5 pb-10 lg:grid-cols-4">
-        <!-- 1 -->
-
-        <div class="relative flex flex-col">
-            <div class="absolute flex h-1/2 w-full justify-center gap-3 pt-16 opacity-0 duration-150 hover:opacity-100">
-                <span class="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-amber-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="h-4 w-4">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                    </svg>
-                </span>
-                <span class="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-amber-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4">
-                        <path
-                            d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
-                    </svg>
-                </span>
-            </div>
-            <img class="" :src="product_chairp" alt="sofa image" />
-
-            <div>
-                <p class="mt-2">CHAIR</p>
-                <p class="font-medium text-violet-900">
-                    $45.00
-                    <span class="text-sm text-gray-500 line-through">$500.00</span>
-                </p>
-
-                <div class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="h-4 w-4 text-yellow-400">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="h-4 w-4 text-yellow-400">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="h-4 w-4 text-yellow-400">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="h-4 w-4 text-yellow-400">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="h-4 w-4 text-gray-200">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <p class="text-sm text-gray-400">(38)</p>
-                </div>
-
-                <div>
-                    <button class="my-5 h-10 w-full bg-violet-900 text-white">
-                        Add to cart
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- 2 -->
-
-        <div class="flex flex-col">
-            <img class="" :src="product_sofap" alt="sofa image" />
-
-            <div>
-                <p class="mt-2">SOFA</p>
-                <p class="font-medium text-violet-900">
-                    $45.00
-                    <span class="text-sm text-gray-500 line-through">$500.00</span>
-                </p>
-
-                <div class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="h-4 w-4 text-yellow-400">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="h-4 w-4 text-yellow-400">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="h-4 w-4 text-yellow-400">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="h-4 w-4 text-yellow-400">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="h-4 w-4 text-gray-200">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <p class="text-sm text-gray-400">(38)</p>
-                </div>
-
-                <div>
-                    <button class="my-5 h-10 w-full bg-violet-900 text-white">
-                        Add to cart
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- 3 -->
-
-        <div class="flex flex-col">
-            <img class="" :src="kitchenp" alt="sofa image" />
-
-            <div>
-                <p class="mt-2">GUYER KITCHEN</p>
-                <p class="font-medium text-violet-900">
-                    $45.00
-                    <span class="text-sm text-gray-500 line-through">$500.00</span>
-                </p>
-
-                <div class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="h-4 w-4 text-yellow-400">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="h-4 w-4 text-yellow-400">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="h-4 w-4 text-yellow-400">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="h-4 w-4 text-yellow-400">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="h-4 w-4 text-gray-200">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <p class="text-sm text-gray-400">(38)</p>
-                </div>
-
-                <div>
-                    <button class="my-5 h-10 w-full bg-violet-900 text-white">
-                        Add to cart
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- 4 -->
-
-        <div class="flex flex-col">
-            <img class="" :src="living_roomp" alt="sofa image" />
-
-            <div>
-                <p class="mt-2">GUYER ROOM</p>
-                <p class="font-medium text-violet-900">
-                    $45.00
-                    <span class="text-sm text-gray-500 line-through">$500.00</span>
-                </p>
-
-                <div class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="h-4 w-4 text-yellow-400">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="h-4 w-4 text-yellow-400">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="h-4 w-4 text-yellow-400">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="h-4 w-4 text-yellow-400">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="h-4 w-4 text-gray-200">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <p class="text-sm text-gray-400">(38)</p>
-                </div>
-
-                <div>
-                    <button class="my-5 h-10 w-full bg-violet-900 text-white">
-                        Add to cart
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
+    <RecommendedProducts class="col-span-12" :recommended-products="recommendedProducts"/>
     <!-- /Recommendations -->
 </template>
