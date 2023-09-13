@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TheCheckbox from "@components/TheCheckbox.vue";
+import BaseCheckbox from "@components/BaseCheckbox.vue";
 import { IFilter } from "@/interfaces/IFilter.ts";
 import { isCategoryFilter } from "@/interfaces/ICategoryFilter.ts";
 import { isPriceFilter } from "@/interfaces/IPriceFilter.ts";
@@ -28,7 +28,9 @@ const getCurrencySymbol = () => {
         <p class="mb-3 font-medium uppercase">{{ filter.title }}</p>
 
         <div v-for="(keyword, index) in filter.keywords" class="flex w-full justify-between">
-            <TheCheckbox :key="`${filter.title}-${keyword.key}-${index}`" :label="keyword.key" :total="keyword.results" />
+            <BaseCheckbox :key="`${filter.title}-${keyword.key}-${index}`" :total="keyword.results" >
+                {{ keyword.key }}
+            </BaseCheckbox>
         </div>
 
     </div>

@@ -21,7 +21,7 @@ const buttontheme = computed(()=> {
 })
 </script>
 <template>
-    <button class="" 
+    <button v-bind="$attrs" class="" 
     :class="buttontheme">
         <slot></slot>
     </button>

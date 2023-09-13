@@ -53,13 +53,9 @@ const catalogProducts: (IProduct)[] = [
         reviews: 58
     }
 ]
-
 </script>
 <template>
-      
     <TheBreadcrumbs class="col-span-12" />
 
-      <!-- TODO: REFACTOR WHOLE TABLE IN A COMPOSITION COMPONENT -->
-      <CatalogTable class="col-span-12" :catalog-products="catalogProducts" />
-
+    <CatalogTable class="col-span-12" :catalog-products="catalogProducts" />
 </template>
