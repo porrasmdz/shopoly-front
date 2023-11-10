@@ -1,11 +1,14 @@
-import { ISku } from "./ISku";
+import { BaseItem } from "./BaseItem";
 
-export interface IOrderItem {
-    image: string,
+export interface IOrderItem extends BaseItem {
     name: string,
-    skus: ISku,
-    price: number,
-    discount: number,
-    quantity: number,
-    total: number
+    status: string,
+    payment_status: string,
+    payment_method: string,
+    user_id: number,
+    total_price: number,
+    total_cost: number,
+    profit: number,
+    total_quantity: number
 }
+     

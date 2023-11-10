@@ -2,13 +2,16 @@
 
 // @ts-nocheck
 import { onMounted, ref } from 'vue';
-import { bed, sleep, outdoor, sofa, kitchen, food, bed_dark, sleep_dark, outdoor_dark, sofa_dark, kitchen_dark, food_dark } from '@/constants/assets.ts'
+import { bed, sleep, outdoor, sofa, kitchen, food, bed_dark, sleep_dark, outdoor_dark, sofa_dark, kitchen_dark, food_dark, bedroomp } from '@/constants/assets.ts'
 import BaseIcon from '@components/BaseIcon.vue';
 import BaseButton from '@components/BaseButton.vue';
 import { ILink } from '@/interfaces/ILink';
+import { useCategory } from '@/composables/useCategory';
+import { Console } from 'console';
 
 const desktopMenuOpen = ref(false);
-const activeCategory = ref<'bedroomc' | 'mattrassc' | 'outdoorc' | 'sofac' | 'kitchenc' | 'livingc'>("bedroomc")
+const { data:categoriesData, loading, getAllCategories } = useCategory();
+const activeCategory = ref<any>()
 
 const navRoutes: Record<string, ILink> = {
     home: { route: "/", text: "Home" },
@@ -21,7 +24,9 @@ const navRoutes: Record<string, ILink> = {
 
 const categories = {
     "bedroomc": {
-        icon: bed, text: "Bedroom", productlines: {
+        icon: bed, 
+        text: "Bedroom", 
+        productlines: {
             "beds": { title: "Beds", products: ['Italian Bed', 'Queen-Size Bed', 'Wooden-Craft Bed', 'King-Size Bed'] },
             "lamps": { title: "Lamps", products: ['Italian Purple Lamp'] },
             "bedside_tables": { title: "Bedside Tables", products: ['Purple Table'] },
@@ -52,7 +57,9 @@ const categories = {
         }
     },
     "livingc": {
-        icon: food, text: "Living Room", productlines: {
+        icon: food,
+        text: "Living Room",
+        productlines: {
 
             "electric": { title: "Televisions", products: [] }
         }
@@ -65,6 +72,7 @@ const isDarkMode = () => {
 }
 
 onMounted(() => {
+    getAllCategories();
     if (isDarkMode()) {
         categories['bedroomc']['icon'] = bed_dark
         categories['mattrassc']['icon'] = sleep_dark
@@ -99,14 +107,14 @@ onMounted(() => {
             </div>
 
             <div class="ml-auto flex gap-4 px-5">
+                
                 <router-link class="font-light text-white duration-100 hover:text-yellow-400 hover:underline"
                     to="/login">Login</router-link>
 
                 <span class="text-white">&#124;</span>
 
                 <router-link class="font-light text-white duration-100 hover:text-yellow-400 hover:underline"
-                    to="/signup">Sign
-                    Up</router-link>
+                    to="/signup">Sign Up</router-link>
             </div>
         </div>
     </nav>
@@ -118,12 +126,13 @@ onMounted(() => {
         <div class="mx-auto flex max-w-[1200px] py-10">
             <div class="w-[300px] border-r">
                 <ul class="px-5">
-                    <li v-for="(category, index) in categories" :key="`${category.text}-${index}`"
+                    <li v-for="(category, index) in categoriesData" :key="`${category.name}-${index}`"
                         @click="activeCategory = index"
                         class="cursor-pointer active:blue-900 flex items-center gap-2 py-2 px-3 hover:bg-neutral-100 dark:hover:bg-neutral-600 active:bg-amber-400 dark:active:bg-amber-400"
                         :class="`${index === activeCategory ? 'bg-amber-400' : ''}`">
-                        <img :src="category.icon" alt="Bedroom icon" />
-                        {{ category.text }}
+                        <img v-if="category.icon" :src="category.icon" alt="Bedroom icon" />
+                        <img v-else :src="`${isDarkMode ? bed_dark : bed}`" alt="Bedroom icon" />
+                        {{ category.name }} 
                         <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -137,13 +146,14 @@ onMounted(() => {
 
             <div class="flex w-full justify-between">
                 <div class="flex gap-6">
-                    <div class="mx-5" v-for="(productline, index) in categories[activeCategory]['productlines']"
+                    <div class="mx-5" v-for="(productline, index) in categories['bedroomc']['productlines']"
                         :key="`${productline}-${index}`">
                         <p class="font-medium text-gray-500 uppercase">{{ productline.title }}</p>
                         <ul class="text-sm leading-8">
                             <li v-for="(product, index) of productline?.products"
                                 :key="`${productline}-${product}-${index}`">
-                                <router-link to="product-detail" @click="desktopMenuOpen = false">{{ product }}</router-link>
+                                <router-link to="product-detail" @click="desktopMenuOpen = false">{{ product
+                                }}</router-link>
                             </li>
 
                         </ul>

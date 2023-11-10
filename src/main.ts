@@ -9,5 +9,5 @@ import '@splidejs/vue-splide/css';
 import App from "./App.vue";
 
 const pinia = createPinia();
-
 createApp(App).use(pinia).use(router).use(VueSplide).mount("#app");
+
