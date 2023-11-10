@@ -18,19 +18,40 @@ export default defineStore('cart', () => {
         totalCost.value += item.data?.price;
     };
 
-    const removeItem = (item:IItem) => {
+    
+    const substractItem = (item:IItem) => {
         let targetItem = items.value.filter( currItem => currItem.id === item.id )[0];
 
-        if(targetItem.data.count === 1) items.value = items.value.filter( currItem => currItem.id !== item.id );
+        if(targetItem?.data?.count === 1) return;
         else targetItem.data.count -= 1;
 
         totalItems.value -= 1;
         totalCost.value -= item.data.price;
     };
+    const removeItem = (item:IItem) => {
+        let targetItem = items.value.filter( currItem => currItem.id === item.id )[0];
+        
+        
+        if(targetItem?.data?.count === 1) {
+            totalItems.value -= 1;
+            totalCost.value -= item.data.price;
+        }
+        else {
+           let price = targetItem.price;
+           if(typeof price ==='string')
+            {price = parseFloat(price)}
+
+            totalItems.value -=  targetItem.data.count;
+            totalCost.value -=  targetItem.data.count *  price;
+        }
+
+        items.value = items.value.filter(currItem => currItem.id!= targetItem.id);
+    };
 
     return {
         items,
         addItem,
+        substractItem,
         removeItem,
         totalItems,
         totalCost

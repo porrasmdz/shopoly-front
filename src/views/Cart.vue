@@ -4,7 +4,11 @@ import TheBreadcrumbs from '@/components/compositions/TheBreadcrumbs.vue';
 import CartItem from '@/components/CartItem.vue';
 import OrderSummary from '@/components/compositions/OrderSummary.vue';
 import { IOrderItem } from '@/interfaces/IOrderItem';
+import cartStore from '@/stores/cartStore';
+import { storeToRefs } from 'pinia';
 
+const {totalItems} = cartStore();
+const { items:cartData } = storeToRefs(cartStore()); 
 const orderItems: (IOrderItem)[] = [
   {
     image: bedroomp,
@@ -63,10 +67,11 @@ const orderItems: (IOrderItem)[] = [
 
   }
 ] 
+
 </script>
 <template>
       <TheBreadcrumbs class="col-span-12" />
-      <section
+      <section 
         class="col-span-12 w-full container mx-auto flex-grow max-w-[1200px] border-b py-5 lg:flex lg:flex-row lg:py-10"
       >
         <!-- Mobile cart table  -->
@@ -74,7 +79,7 @@ const orderItems: (IOrderItem)[] = [
           class="container mx-auto my-3 flex w-full flex-col gap-3 px-4 md:hidden"
         >
          
-          <CartItem v-for="item in orderItems" :key="`${item.name}-${item.skus}`" :order_item="item"/>
+          <CartItem v-for="item in cartData" :key="`${item.name}-${item.skus}`" :order_item="item"/>
         </section>
         <!-- /Mobile cart table  -->
 
@@ -94,8 +99,10 @@ const orderItems: (IOrderItem)[] = [
             </thead>
             <tbody>
               <!-- 1 -->
-
-              <CartItem  v-for="item in orderItems" :key="`lg-${item.name}-${item.skus}`" :order_item="item" />
+              <div v-if="cartData.length < 1" class="my-12">
+              No hay items todavia
+              </div>
+              <CartItem  v-for="item in cartData" :key="`lg-${totalItems}`" :order_item="item" />
 
              
             </tbody>

@@ -19,6 +19,7 @@ export const useItem = () => {
           .then((resbody) => {
             data.value = resbody.data;
             loading.value = false;
+            console.log(data.value)
           })
           .catch((err) => {
             loading.value = false;

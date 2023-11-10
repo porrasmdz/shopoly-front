@@ -10,7 +10,10 @@ export interface IItem extends BaseItem{
     sort: number,
     category_id: number,
     category?: ICategory,
-    price: number,
+    price: number | string,
+    discount?: number | string,
+    stars?:number,
+    reviews?: number,
     files: IFile[],
     item_attributes: unknown,
     skus: ISku[]
