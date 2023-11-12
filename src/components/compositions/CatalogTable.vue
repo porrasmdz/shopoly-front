@@ -25,7 +25,7 @@ onMounted(() => {
       <GridOptions />
       <!-- /Table Filters -->
 
-      <section class="mx-auto grid max-w-[1200px] grid-cols-2 gap-3 px-5 pb-10 lg:grid-cols-3">
+      <section class="mx-auto grid max-w-[1200px] grid-cols-2 gap-3 px-5 pb-10 lg:grid-cols-3" >
         <ProductCard v-if="!loading" :product="product" v-for="product in productsData"
           :key="`catalog-${product.name}`" />
         <div v-else class="w-full col-span-full place-content-center">

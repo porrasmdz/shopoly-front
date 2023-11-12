@@ -1,4 +1,6 @@
 <script setup lang="ts">
+// @ts-nocheck
+
 import TheBreadcrumbs from '@/components/compositions/TheBreadcrumbs.vue';
 import RecommendedProducts from '@/components/compositions/RecommendedProducts.vue';
 import { kitchenp, outdoorp, living_roomp, product_detailp, product_chairp,product_sofap } from '@/constants/assets';

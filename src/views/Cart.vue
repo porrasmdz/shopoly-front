@@ -1,72 +1,12 @@
 <script setup lang="ts">
-import {  bedroomp, product_chairp, mattrassp, outdoorp } from '@/constants/assets';
 import TheBreadcrumbs from '@/components/compositions/TheBreadcrumbs.vue';
 import CartItem from '@/components/CartItem.vue';
 import OrderSummary from '@/components/compositions/OrderSummary.vue';
-import { IOrderItem } from '@/interfaces/IOrderItem';
 import cartStore from '@/stores/cartStore';
 import { storeToRefs } from 'pinia';
 
 const {totalItems} = cartStore();
 const { items:cartData } = storeToRefs(cartStore()); 
-const orderItems: (IOrderItem)[] = [
-  {
-    image: bedroomp,
-    name:"ITALIAN BED",
-    price:200,
-    quantity:1,
-    skus: {
-        title: "Size",
-        keywords: ["L"],
-        type: "Attribute"
-    },
-    discount: 0,
-    total: 200
-
-  },
-  {
-    image: product_chairp,
-    name:"GUYER CHAIR",
-    price:200,
-    quantity:1,
-    skus: {
-        title: "Size",
-        keywords: ["XL"],
-        type: "Attribute"
-    },
-    discount: 0,
-    total: 200
-
-  },
-  {
-    image: outdoorp,
-    name:"OUTDOOR CHAIR",
-    price:200,
-    quantity:1,
-    skus: {
-        title: "Size",
-        keywords: ["XL"],
-        type: "Attribute"
-    },
-    discount: 0,
-    total: 200
-
-  },
-  {
-    image: mattrassp,
-    name:"MATTRASS_COMFORT +",
-    price:200,
-    quantity:1,
-    skus: {
-        title: "Size",
-        keywords: ["XL"],
-        type: "Attribute"
-    },
-    discount: 0,
-    total: 200
-
-  }
-] 
 
 </script>
 <template>

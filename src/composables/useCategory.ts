@@ -1,4 +1,4 @@
-import { ApiResponse } from "@/interfaces/IApiResponse";
+// @ts-nocheck
 import { ICategory } from "@/interfaces/ICategory";
 import { useCategoryStore } from "@/stores/categoryStore";
 import { storeToRefs } from "pinia";

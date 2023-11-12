@@ -1,7 +1,7 @@
 import { IColorFilter } from "@/interfaces/IColorFilter";
 import { ISku } from "./ISku";
 
-export interface IColorSku extends ISku, Pick<IColorFilter, 'keywords' | 'type'>{
+export interface IColorSku extends  Omit<ISku, 'keywords' | 'type'>, Pick<IColorFilter, 'keywords' | 'type'>{
     
 }
 export function isColorSku(obj: any): obj is IColorSku {

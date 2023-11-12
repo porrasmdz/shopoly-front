@@ -1,7 +1,7 @@
 import { ICategoryFilter } from "@/interfaces/ICategoryFilter";
 import { ISku } from "./ISku";
 
-export interface ICategorySku extends ISku, Pick<ICategoryFilter, 'keywords' | 'type'>{
+export interface ICategorySku extends Omit<ISku, 'keywords' | 'type'>, Pick<ICategoryFilter, 'keywords' | 'type'>{
     
 }
 

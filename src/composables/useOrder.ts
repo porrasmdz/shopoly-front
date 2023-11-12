@@ -1,4 +1,4 @@
-import { ApiResponse } from '@/interfaces/IApiResponse';
+// @ts-nocheck
 import { IOrderItem } from '@/interfaces/IOrderItem';
 import { useOrderItemStore } from '@/stores/orderStore';
 import { storeToRefs } from 'pinia';

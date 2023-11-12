@@ -67,7 +67,7 @@ const getPrice = (product: IItem) => {
 </script>
 <template>
   <div class="flex flex-col">
-    <div class="relative flex h-full">
+    <div class="relative flex h-60">
       <img  class="object-cover" :src="checkProductImage(product)" :alt="`${product.name} image`" />
       <div class="absolute flex h-full w-full items-center justify-center gap-3 opacity-0 duration-150 hover:opacity-100">
         <router-link to="/product-detail">
@@ -85,7 +85,7 @@ const getPrice = (product: IItem) => {
       </div>
     </div>
 
-    <div>
+    <div class="flex flex-col justify-between h-40">
       <p class="mt-2 text-black dark:text-white uppercase">{{ product.name }}</p>
       <p class="font-medium text-violet-900">
         <span>
@@ -100,7 +100,6 @@ const getPrice = (product: IItem) => {
 
         <p class="text-sm text-gray-400">({{ product.reviews }})</p>
       </div>
-
       <div>
         <BaseButton @click="addItem(product)" type="secondary" class="my-5 h-10 w-full text-white">
           Add to cart

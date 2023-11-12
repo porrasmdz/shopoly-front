@@ -1,7 +1,7 @@
 import { IAttributeFilter } from "./IAttributeFilter";
 import { ISku } from "./ISku";
 
-export interface IAttributeSku extends ISku, Pick<IAttributeFilter, 'keywords' | 'type'>{
+export interface IAttributeSku extends Omit<ISku, 'keywords' | 'type'>, Pick<IAttributeFilter, 'keywords' | 'type'>{
     
 }
 

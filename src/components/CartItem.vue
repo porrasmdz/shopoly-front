@@ -7,7 +7,7 @@ import BaseIcon from '@components/BaseIcon.vue';
 defineProps<{
     order_item: IItem
 }>()
-const { addItem, substractItem, removeItem, totalCost, totalItems } = cartStore();
+const { addItem, substractItem, removeItem } = cartStore();
 
 const checkProductImage = (product: IItem) => {
     if (product?.files?.length > 0) {
@@ -33,9 +33,9 @@ const getSkuKeywords = (order_it: IItem) => {
 }
 
 const getTotalPrice = (order_it: IItem) => {
-    if (order_it?.data?.count) {
+    if (order_it?.data?.count ) {
         let price;
-        price = order_it?.price;
+        price = order_it?.price as number;
         if (typeof order_it?.price === 'string') {
             price = parseFloat(order_it.price);
         }
