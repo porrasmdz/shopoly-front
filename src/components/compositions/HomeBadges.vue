@@ -5,21 +5,21 @@ import { IBadge } from "@/interfaces/IBadge.ts";
 const badges:(IBadge)[] = [
   {
     icon: 'truck',
-    title: 'Free Delivery',
-    subtitle: 'Orders from $20',
+    title: 'Envío Gratis',
+    subtitle: 'En compras desde $20',
   },
 
   {
     icon: 'money',
-    title: 'Money Returns',
-    subtitle: '30 Days guarantee',
+    title: 'Ámalo o Cámbialo',
+    subtitle: 'Garantía de 30 días',
 
   },
 
   {
     icon: 'help',
-    title: '24/7 Supports',
-    subtitle: 'Consumer support',
+    title: 'Soporte 24/7',
+    subtitle: 'Atención al Cliente',
 
   }
 ]

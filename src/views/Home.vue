@@ -21,19 +21,19 @@ onMounted(() => {
     <HomeBadges class="col-span-12" />
 
     <h2 class="col-span-12 mx-auto mb-5 max-w-[1200px] px-5 flex w-full">
-        SHOP BY CATEGORY
+        COMPRAS POR CATEGORÍA
 
     </h2>
     <HomeCategories class="col-span-12" />
 
     <!-- /Slider  -->
-    <h2 class="col-span-12 mx-auto mt-10 mb-5 max-w-[1200px] px-5 w-full">TOP NEW ARRIVAL</h2>
+    <h2 class="col-span-12 mx-auto mt-10 mb-5 max-w-[1200px] px-5 w-full">LO MÁS RECIENTE</h2>
     <!-- Slider  -->
 
     <HomeSlider class="col-span-12" />
     <HomeOffer />
 
-    <p class="col-span-12 mx-auto mt-10 mb-5 max-w-[1200px] px-5">RECOMMENDED FOR YOU</p>
+    <p class="col-span-12 mx-auto mt-10 mb-5 max-w-[1200px] px-5">RECOMENDADO PARA TI</p>
     <RecommendedProducts class="col-span-12" v-if="productData.length > maxRecommendedItems" 
     :recommended-products="productData" :max-items="maxRecommendedItems" />
 </template>

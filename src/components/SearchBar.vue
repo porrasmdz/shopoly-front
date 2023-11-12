@@ -6,10 +6,10 @@ import BaseButton from '@components/BaseButton.vue';
     <form class="flex items-center h-9 border dark:border-gray-400">
         <BaseIcon :icon="'search'"></BaseIcon>
 
-        <input class="hidden w-11/12 outline-none md:block bg-transparent" type="search" placeholder="Search" />
+        <input class="hidden w-11/12 outline-none md:block bg-transparent" type="search" placeholder="Muebles de diseñador..." />
 
         <BaseButton class="h-full ml-auto">
-            Search
+            Buscar
         </BaseButton>
     </form>
 </template>

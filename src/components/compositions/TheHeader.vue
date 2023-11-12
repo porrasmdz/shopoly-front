@@ -8,16 +8,16 @@ import { ILink } from '@/interfaces/ILink';
 
 const mobileMenuOpen = ref(false);
 const headerRoutes: Record<string, ILink> = {
-    wishlist: { route: "/wishlist", icon: 'heart', name: "Wishlist" },
-    cart: { route: "/cart", icon: 'cart', name: "Cart" },
-    profile: { route: "/profile", icon: 'profile', name: "Account" }
+    // wishlist: { route: "/wishlist", icon: 'heart', name: "Wishlist" },
+    cart: { route: "/cart", icon: 'cart', name: "Carrito" },
+    // profile: { route: "/profile", icon: 'profile', name: "Account" }
 
 }
 const mobileRoutes: Record<string, ILink> = {
-    home: { route: "/", name: "Home" },
-    catalog: { route: "/catalog", name: "Catalog" },
-    about: { route: "/about", name: "About Us" },
-    contact: { route: "/contact", name: "Contact Us" }
+    home: { route: "/", name: "Inicio" },
+    catalog: { route: "/catalog", name: "Catálogo" },
+    about: { route: "/about", name: "¿Quiénes Somos?" },
+    contact: { route: "/contact", name: "Contacto" }
 
 }
 

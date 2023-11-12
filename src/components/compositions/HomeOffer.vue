@@ -10,16 +10,16 @@ import {sale_bagep} from "@/constants/assets"
         class="mt-10 flex max-w-[1200px] justify-between bg-violet-900 px-5"
       >
         <div class="py-8 px-3 lg:px-16">
-          <p class="text-white">ONLINE EXCLUSIVE</p>
-          <h2 class="pt-6 text-5xl font-bold text-yellow-400">15% OFF</h2>
+          <p class="text-white">OFERTA DE TEMPORADA</p>
+          <h2 class="pt-6 text-5xl font-bold text-yellow-400">15% DESCUENTO</h2>
           <p class="pt-4 text-white">
-            ACCENT CHAIRS, <br />
-            TABLES & OTTOMANS
+            SILLAS DE HOGAR, <br />
+            MESAS & MANTELES
           </p>
           <BaseButton
             class="mt-6 px-4 py-2 duration-100"
           >
-            Shop now
+            Cómpralo Ya
           </BaseButton>
         </div>
 

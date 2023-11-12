@@ -75,9 +75,10 @@ const getPrice = (product: IItem) => {
             <BaseIcon icon="search-alt" />
           </span>
         </router-link>
-        <span class="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-amber-400">
+        <!-- Add to Wishlist -->
+        <!-- <span class="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-amber-400">
           <BaseIcon icon="heart-filled" />
-        </span>
+        </span> -->
       </div>
 
       <div class="absolute right-1 mt-3 flex items-center justify-center bg-amber-400">
@@ -102,7 +103,7 @@ const getPrice = (product: IItem) => {
       </div>
       <div>
         <BaseButton @click="addItem(product)" type="secondary" class="my-5 h-10 w-full text-white">
-          Add to cart
+          Añadir al carrito
         </BaseButton>
       </div>
     </div>

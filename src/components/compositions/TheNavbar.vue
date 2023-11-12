@@ -14,10 +14,10 @@ const { data:categoriesData, loading, getAllCategories } = useCategory();
 const activeCategory = ref<any>()
 
 const navRoutes: Record<string, ILink> = {
-    home: { route: "/", text: "Home" },
-    catalog: { route: "/catalog", text: "Catalog" },
-    about: { route: "/about", text: "About Us" },
-    contact: { route: "/contact", text: "Contact Us" }
+    home: { route: "/", text: "Inicio" },
+    catalog: { route: "/catalog", text: "Catálogo" },
+    about: { route: "/about", text: "¿Quiénes Somos?" },
+    contact: { route: "/contact", text: "Contacto" }
 
 }
 
@@ -93,7 +93,7 @@ onMounted(() => {
                 class="ml-5 flex h-full w-40 cursor-pointer items-center justify-center bg-amber-400">
                 <div class="flex justify-around" href="#">
                     <BaseIcon icon="hamburger" />
-                    All categories
+                    Categorías
                 </div>
             </BaseButton>
 
@@ -106,7 +106,7 @@ onMounted(() => {
 
             </div>
 
-            <div class="ml-auto flex gap-4 px-5">
+            <!-- <div class="ml-auto flex gap-4 px-5">
                 
                 <router-link class="font-light text-white duration-100 hover:text-yellow-400 hover:underline"
                     to="/login">Login</router-link>
@@ -115,7 +115,7 @@ onMounted(() => {
 
                 <router-link class="font-light text-white duration-100 hover:text-yellow-400 hover:underline"
                     to="/signup">Sign Up</router-link>
-            </div>
+            </div> -->
         </div>
     </nav>
     <!-- /Nav bar -->
@@ -144,7 +144,7 @@ onMounted(() => {
                 </ul>
             </div>
 
-            <div class="flex w-full justify-between">
+            <!-- <div class="flex w-full justify-between">
                 <div class="flex gap-6">
                     <div class="mx-5" v-for="(productline, index) in categories['bedroomc']['productlines']"
                         :key="`${productline}-${index}`">
@@ -161,7 +161,7 @@ onMounted(() => {
 
 
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 

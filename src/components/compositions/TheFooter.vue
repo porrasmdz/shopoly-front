@@ -4,29 +4,29 @@
     import {linkedin, linkedin_dark, github, github_dark, telegram, telegram_dark} from '@/constants/assets';
     
     const socialNetworks =() => (isDarkMode() ? [
-        {image: linkedin_dark, link: "https://github.com/bbulakh"},
-        {image: github_dark, link: "https://t.me/b_bulakh"},
-        {image: telegram_dark, link: "https://www.linkedin.com/in/bogdan-bulakh-393284190/"}
-    ] : [ {image: linkedin, link: "https://github.com/bbulakh"},
-        {image: github, link: "https://t.me/b_bulakh"},
-        {image: telegram, link: "https://www.linkedin.com/in/bogdan-bulakh-393284190/"}])
+        {image: linkedin_dark, link: "https://www.linkedin.com/in/joel-veloz-233305211/"},
+        {image: github_dark, link: "https://github.com/JoelVeloz"},
+        {image: telegram_dark, link: "https://wa.link/wwzttw"}
+    ] : [ {image: linkedin, link: "https://www.linkedin.com/in/joel-veloz-233305211/"},
+        {image: github, link: "https://github.com/JoelVeloz"},
+        {image: telegram, link: "https://wa.link/wwzttw"}])
 
     const footerGroups = [
         {
-            title: 'Features',
-            links: [{route: '/', name: 'Marketing'}, {route: '/', name: 'Commerce'}, {route: '/', name: 'Analytics'},{route: '/', name: 'Merchandise'}]
+            title: 'CARACTERÍSTICAS',
+            links: [{route: '/', name: 'Marketing'}, {route: '/', name: 'Comercial'}, {route: '/', name: 'Analítica'},{route: '/', name: 'Mercadería'}]
         },
         {
-            title: 'Support',
-            links: [{route: '/', name: 'Pricing'}, {route: '/', name: 'Docs'}, {route: '/', name: 'Audition'}, {route: '/', name: 'Art Status'}]
+            title: 'SOPORTE',
+            links: [{route: '/', name: 'Precios'}, {route: '/', name: 'Guías'}, {route: '/', name: 'Auditorías'}, {route: '/', name: 'Galería'}]
         },
         {
-            title: 'Documents',
-            links: [{route: '/', name: 'Terms'}, {route: '/', name: 'Conditions'}, {route: '/', name: 'Privacy'}, {route: '/', name: 'License'}]
+            title: 'Documentación',
+            links: [{route: '/', name: 'Términos'}, {route: '/', name: 'Condiciones'}, {route: '/', name: 'Privacidad'}, {route: '/', name: 'Licensia'}]
         },
         {
-            title: 'Delivery',
-            links: [{route: '/', name: 'List of Countries'}, {route: '/', name: 'Special Information'}, {route: '/', name: 'Restrictions'}, {route: '/', name: 'Payment'}]
+            title: 'Envíos',
+            links: [{route: '/', name: 'Países'}, {route: '/', name: 'Especial'}, {route: '/', name: 'Restricciones'}, {route: '/', name: 'Pagos'}]
         }
     
     ]

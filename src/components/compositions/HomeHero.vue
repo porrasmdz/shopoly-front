@@ -8,7 +8,7 @@ import BaseButton from '@components/BaseButton.vue';
 
   <BaseHero :image="header_bg">
     <h1 class="text-4xl font-bold sm:text-5xl lg:text-left">
-      Best Collection for Home decoration
+      Los mejores diseños para tu hogar
     </h1>
     <p class="pt-3 text-xs lg:w-3/5 lg:pt-5 lg:text-left lg:text-base">
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur
@@ -16,7 +16,7 @@ import BaseButton from '@components/BaseButton.vue';
       ducimus pariatur eaque labore.
     </p>
     <BaseButton class="mx-auto mt-5 w-1/2 py-1 duration-100  lg:mx-0 lg:h-10 lg:w-2/12 lg:px-10">
-      Order Now
+      Comprar Ya
     </BaseButton>
   </BaseHero>
   <!-- /Offer image  -->
