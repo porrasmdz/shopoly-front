@@ -91,16 +91,16 @@ onMounted(() => {
         <div class="mx-auto hidden h-12 w-full max-w-[1200px] items-center md:flex">
             <BaseButton @click="desktopMenuOpen = !desktopMenuOpen"
                 class="ml-5 flex h-full w-40 cursor-pointer items-center justify-center bg-amber-400">
-                <div class="flex justify-around" href="#">
-                    <BaseIcon icon="hamburger" />
+                <div class="flex justify-around " href="#">
+                    <BaseIcon dark-mode-class="text-black dark:text-amber-800" icon="hamburger" />
                     Categorías
                 </div>
             </BaseButton>
 
-            <div class="mx-7 flex gap-8">
+            <div class="mx-7 flex gap-8 text-white">
                 <router-link v-for="(option, index) in navRoutes" :key="`${option.route}-${index}`"
                     @click="desktopMenuOpen = false"
-                    class="font-light text-white duration-100 hover:text-yellow-400 hover:underline" :to="option.route">
+                    class="font-light duration-100 hover:text-yellow-400 hover:underline" :to="option.route">
                     {{ option.text }}
                 </router-link>
 

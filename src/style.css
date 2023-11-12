@@ -16,4 +16,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  transition: all !important;
+  transition-duration: 300ms !important;
+}
+body * {
+  @apply transition-colors duration-300 ease-out  !important; 
+}
+
+body {
+  @apply dark:text-white text-gray-950;
 }

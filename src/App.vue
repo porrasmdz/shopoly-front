@@ -14,15 +14,26 @@ import {  RouteLocationNormalized } from "vue-router";
       let key = to.meta.layout;  
       layout.value = layouts[key] || 'div';
     });
-
   provide('app:layout', layout)
 </script>
 <template>
-  <component :is="layout || 'div'">
+  <component :is="layout || 'div'" class="transition-colors duration-1000">
     <router-view />
   </component>
 </template>
+<style>
+html {
+  background-color: rgba(255, 255, 255, 1);
+  transition: all 1s ease;
+  color: rgba(0, 0, 0, 0.87) ;
+}
+.dark {
+  background-color: rgba(0, 0, 0, 0.87);
+  color: #fff;
+  transition: all 1s ease;
+} 
 
+</style>
 <style scoped>
 
 .logo {
@@ -37,5 +48,6 @@ import {  RouteLocationNormalized } from "vue-router";
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
+
 </style>
 @/layouts/layouts

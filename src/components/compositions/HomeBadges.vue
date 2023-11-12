@@ -26,13 +26,13 @@ const badges:(IBadge)[] = [
 </script>
 <template>
   <!-- Cons bages -->
-  <section class="col-span-12 container mx-auto my-8 flex flex-col justify-center gap-3 lg:flex-row">
+  <section class="col-span-12 container mx-auto my-8 flex flex-col justify-center gap-3 lg:flex-row dark:text-white text-gray-950">
     <!-- 1 -->
 
     <div v-for="badge in badges" :key="`${badge.title}-${badge.subtitle}`"
       class="mx-5 flex flex-row items-center justify-center border-2 border-yellow-400 py-4 px-5">
-      <div class="">
-        <BaseIcon :icon="badge.icon" />
+      <div class="text-indigo-600">
+        <BaseIcon dark-mode-class="text-violet-900" :icon="badge.icon" />
       </div>
 
       <div class="ml-6 flex flex-col justify-center">

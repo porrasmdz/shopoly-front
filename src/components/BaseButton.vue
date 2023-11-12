@@ -7,16 +7,16 @@ const props = defineProps<{
 }>();
 const buttontheme = computed(()=> {
     if(props.type ==='primary') {
-        return "bg-amber-400 px-4 hover:bg-yellow-300 text-white dark:text-amber-800"
+        return "bg-amber-400 px-4 hover:bg-yellow-300 text-black dark:text-amber-800"
     }
     if(props.type ==='secondary') {
-        return "bg-violet-900 px-4 hover:bg-violet-800 text-white active:bg-purple-900"
+        return "bg-violet-900 px-4 hover:bg-violet-800 text-black active:bg-purple-900"
     }
     if(props.type ==='tertiary') {
-        return "bg-amber-400 px-4 hover:bg-yellow-300 text-white dark:text-amber-800"
+        return "bg-amber-400 px-4 hover:bg-yellow-300 text-black dark:text-amber-800"
     }
     else {
-        return "bg-amber-400 px-4 hover:bg-yellow-300 text-white dark:text-amber-800"
+        return "bg-amber-400 px-4 hover:bg-yellow-300 text-black dark:text-amber-800"
     }
 })
 </script>

@@ -2,8 +2,11 @@
     import CompanyLogo from '@components/CompanyLogo.vue';
     import GroupedLinks from '@components/compositions/GroupedLinks.vue';
     import {linkedin, linkedin_dark, github, github_dark, telegram, telegram_dark} from '@/constants/assets';
-    
-    const socialNetworks =() => (isDarkMode() ? [
+    import { useDark } from '@vueuse/core';
+
+    const isDark = useDark();
+
+    const socialNetworks =() => (isDark.value ? [
         {image: linkedin_dark, link: "https://www.linkedin.com/in/joel-veloz-233305211/"},
         {image: github_dark, link: "https://github.com/JoelVeloz"},
         {image: telegram_dark, link: "https://wa.link/wwzttw"}
@@ -31,10 +34,7 @@
     
     ]
 
-    
-    const isDarkMode = () => {
-        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-    }
+ 
 </script>
 <template>
     
@@ -48,7 +48,7 @@
           Lorem ipsum dolor sit amet consectetur <br />
           adipisicing elit.
         </p>
-        <div class="mt-10 flex gap-3">
+        <div class="mt-10 flex gap-3 ">
           <a :href="socialnwk.link" v-for="(socialnwk) in socialNetworks()" :key="socialnwk.link">
             <img
               class="h-5 w-5 cursor-pointer"
@@ -67,7 +67,7 @@
       
     </footer>
     <!-- /Desktop Footer  -->
-    <section class="h-11 bg-amber-400 dark:text-black">
+    <section class="h-11 bg-amber-400 dark:text-amber-800">
       <div
         class="mx-auto flex max-w-[1200px] items-center justify-between px-4 pt-2"
       >

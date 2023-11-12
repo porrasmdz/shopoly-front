@@ -32,7 +32,7 @@ onUpdated(()=>{
   v-if="categoriesData.length > 0 && !loading">
     <router-link to="/" v-for="cId in maxCategories" :key="categoriesData[cId-1]?.name">
       <div class="relative cursor-pointer">
-        <img class="mx-auto h-auto w-auto brightness-50 duration-300 hover:brightness-100" :src="checkCategoryImage(categoriesData[cId-1])"
+        <img class="mx-auto h-auto w-auto brightness-50 duration-300 hover:brightness-[20%] dark:hover:brightness-100" :src="checkCategoryImage(categoriesData[cId-1])"
           alt="bedroom cathegory image" />
 
         <p

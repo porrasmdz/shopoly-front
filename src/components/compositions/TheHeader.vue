@@ -2,6 +2,7 @@
 import BaseIcon from '@components/BaseIcon.vue';
 import SearchBar from '@components/SearchBar.vue';
 import CompanyLogo from '@components/CompanyLogo.vue';
+import DarkModeButton from '@components/DarkModeButton.vue';
 
 import { ref } from 'vue';
 import { ILink } from '@/interfaces/ILink';
@@ -38,6 +39,7 @@ const mobileRoutes: Record<string, ILink> = {
         </div>
 
         <SearchBar class="hidden w-2/5 md:flex" />
+        <DarkModeButton/>
         <div class="hidden gap-3 md:!flex">
             <router-link v-for="(option, index) in headerRoutes" :key="`${option.route}-${index}`" :to="option.route"
                 class="relative flex cursor-pointer flex-col items-center justify-center">
@@ -73,7 +75,7 @@ const mobileRoutes: Record<string, ILink> = {
                 </router-link>
             </div>
             <SearchBar class="my-4 mx-5" />
-
+            
             <ul class="text-center font-medium">
                 <li v-for="(option, index) in mobileRoutes" @click="mobileMenuOpen = false"
                     :key="`${option.route}-${index}`" class="py-2">

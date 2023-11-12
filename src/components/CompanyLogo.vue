@@ -2,6 +2,7 @@
 
 // @ts-nocheck
 import { logo_light, logo_dark } from "@/constants/assets.ts"
+import { useDark } from '@vueuse/core'
 import { computed } from "vue";
 
 type Size = 'auto' | 'lg'
@@ -9,9 +10,8 @@ const props = defineProps<{
     size?: Size
 }>()
 
-const isDarkMode = () => {
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-}
+const isDark = useDark();
+
 const size = computed(() => {
     if (props.size == 'lg') {
         return 'w-[200px]'
@@ -21,6 +21,6 @@ const size = computed(() => {
 
 </script>
 <template>
-    <img v-if="isDarkMode()" :src="logo_dark" :class="size" alt="company logo" />
+    <img v-if="isDark" :src="logo_dark" :class="size" alt="company logo" />
     <img v-else :class="size" :src="logo_light" alt="company logo" />
 </template>
