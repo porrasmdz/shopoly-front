@@ -38,6 +38,7 @@ onUnmounted(()=>{
                     {{ data.name }}
                 </li>
             </ul>
+           
         </div>
        
         <BaseButton @click.prevent="" class="h-full ml-auto">
