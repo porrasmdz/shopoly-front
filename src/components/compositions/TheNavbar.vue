@@ -10,7 +10,7 @@ import { useCategory } from '@/composables/useCategory';
 import { Console } from 'console';
 
 const desktopMenuOpen = ref(false);
-const { data:categoriesData, loading, getAllCategories } = useCategory();
+const { data:categoriesData, loading} = useCategory();
 const activeCategory = ref<any>()
 
 const navRoutes: Record<string, ILink> = {
@@ -72,7 +72,6 @@ const isDarkMode = () => {
 }
 
 onMounted(() => {
-    getAllCategories();
     if (isDarkMode()) {
         categories['bedroomc']['icon'] = bed_dark
         categories['mattrassc']['icon'] = sleep_dark

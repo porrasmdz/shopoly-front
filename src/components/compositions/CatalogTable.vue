@@ -3,14 +3,16 @@ import LoaderComponent from '@/components/LoaderComponent.vue'
 import CatalogFilters from '@/components/compositions/CatalogFilters.vue';
 import ProductCard from '@/components/ProductCard.vue';
 import GridOptions from '@components/compositions/GridOptions.vue'
-
 import { IItem } from '@/interfaces/IItem';
 
 
 defineProps<{
   catalogProducts: (IItem)[],
-  loading: boolean
+  loading: boolean,
+  pages: number;
 }>()
+
+
 
 </script>
 <template>
@@ -18,17 +20,15 @@ defineProps<{
     <CatalogFilters />
     <div class="w-full">
       <!-- Table Filters> -->
-      <GridOptions />
+      <GridOptions :pages="pages" :loading="loading"/>
       <!-- /Table Filters -->
 
-      <section class="mx-auto grid max-w-[1200px] grid-cols-2 gap-3 px-5 pb-10 lg:grid-cols-3" >
+      <section class="mx-auto grid max-w-[1200px] grid-cols-2 gap-3 px-5 pb-10 lg:grid-cols-3">
         <ProductCard v-if="!loading" :product="product" v-for="product in catalogProducts"
           :key="`catalog-${product.name}`" />
         <div v-else class="w-full col-span-full place-content-center">
-          <LoaderComponent/>
+          <LoaderComponent />
         </div>
-
       </section>
-    </div>
-  </section>
-</template>
+  </div>
+</section></template>

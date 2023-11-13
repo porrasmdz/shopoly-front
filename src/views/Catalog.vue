@@ -2,17 +2,12 @@
 import TheBreadcrumbs from '@/components/compositions/TheBreadcrumbs.vue';
 import CatalogTable from '@/components/compositions/CatalogTable.vue';
 import { useItem } from '@/composables/useItem';
-import { onMounted } from 'vue';
 
 
-const { data: productsData, loading, getAllItems } = useItem();
+const { data: productsData, loading, totalPages } = useItem();
 
-onMounted(() => {
-  getAllItems();
-})
 </script>
 <template>
     <TheBreadcrumbs class="col-span-12" />
-
-    <CatalogTable class="col-span-12" :catalog-products="productsData" :loading="loading" />
+    <CatalogTable class="col-span-12" :catalog-products="productsData" :loading="loading" :pages="totalPages" />
 </template>

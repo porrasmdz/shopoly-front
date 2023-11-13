@@ -9,10 +9,9 @@ import RecommendedProducts from '@components/compositions/RecommendedProducts.vu
 import { useItem } from '@/composables/useItem';
 import { onMounted } from 'vue';
 
-const { data:productData ,getAllItems } = useItem();
+const { data:productData} = useItem();
 const maxRecommendedItems = 8
 onMounted(() => {
-    getAllItems()
 })
 </script>
 <template>

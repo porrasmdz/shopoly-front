@@ -1,4 +1,5 @@
 // @ts-nocheck
+import { ApiResponse } from "@/interfaces/IApiResponse";
 import { IItem } from "@/interfaces/IItem";
 import { useItemStore } from "@/stores/itemStore";
 import { storeToRefs } from "pinia";
@@ -7,19 +8,27 @@ export const useItem = () => {
   const API_URL = import.meta.env.VITE_API_URL + "items";
 
   const itemStore = useItemStore();
-  const { data, limit, loading, totalResults, nextPageUrl, prevPageUrl } =
+  const { data, limit, loading, page, totalResults, nextPageUrl, prevPageUrl, totalPages } =
     storeToRefs(itemStore);
 
-  const getAllItems = async () => {
+  const getAllItems = async (url?) => {
+    let targetUrl = (url ?? API_URL )
     loading.value = true;
-    fetch(API_URL)
+    fetch(targetUrl, {
+      headers:{},
+      
+    })
       .then((res) => {
         res
           .json()
-          .then((resbody) => {
+          .then((resbody:ApiResponse) => {
             data.value = resbody.data;
+            page.value = resbody.current_page;
+            totalResults.value = resbody.total;
+            totalPages.value = resbody.last_page;
+            nextPageUrl.value = resbody.next_page_url;
+            prevPageUrl.value = resbody.prev_page_url; 
             loading.value = false;
-            console.log(data.value)
           })
           .catch((err) => {
             loading.value = false;
@@ -39,7 +48,9 @@ export const useItem = () => {
     data,
     limit,
     loading,
+    page,
     totalResults,
+    totalPages,
     nextPageUrl,
     prevPageUrl,
 

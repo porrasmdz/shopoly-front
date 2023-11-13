@@ -2,9 +2,9 @@
 import { ICategory } from "@/interfaces/ICategory.ts";
 import { imgplaceholder } from '@/constants/assets';
 import { useCategory } from "@/composables/useCategory";
-import { onMounted, onUpdated } from "vue";
+import { onUpdated, ref } from "vue";
 
-let maxCategories = 10;
+let maxCategories = ref(6);
 const checkCategoryImage = (category: ICategory) => {
   if (category?.data?.files?.length > 0) {
     return category.data.files[0].url
@@ -13,23 +13,20 @@ const checkCategoryImage = (category: ICategory) => {
     return imgplaceholder
   }
 }
-const { data: categoriesData, loading, getAllCategories } = useCategory();
+const { data: categoriesData, loading } = useCategory();
 
 
-onMounted(()=>
-{
-  getAllCategories()
-})
 onUpdated(()=>{
-  if(categoriesData.value.length < maxCategories) {
-    maxCategories = categoriesData.value.length
+  if(categoriesData?.value?.length < maxCategories.value) {
+    maxCategories.value = categoriesData?.value?.length
   }
 })
 </script>
 <template>
-  <!-- Cathegories -->
-  <section class="col-span-12 mx-auto grid max-w-[1200px] grid-cols-2 px-5 lg:grid-cols-3 lg:gap-5" 
+  <!-- Categories -->
+  <section class="col-span-12 mx-auto grid max-w-[1200px] grid-cols-2 px-5 lg:grid-cols-3 lg:gap-5" :key="maxCategories"
   v-if="categoriesData.length > 0 && !loading">
+  
     <router-link to="/" v-for="cId in maxCategories" :key="categoriesData[cId-1]?.name">
       <div class="relative cursor-pointer">
         <img class="mx-auto h-auto w-auto brightness-50 duration-300 hover:brightness-[20%] dark:hover:brightness-100" :src="checkCategoryImage(categoriesData[cId-1])"
