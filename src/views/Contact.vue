@@ -43,8 +43,8 @@ const subsidiaries : (ISubsidiary)[] = [
         <!-- Contact section  -->
 
         <section class="mx-auto my-5 text-center">
-          <h2 class="text-3xl font-bold">Have another question?</h2>
-          <p>Complete the form below</p>
+          <h2 class="text-3xl font-bold">¿Aún Tienes Dudas?</h2>
+          <p>Llena el formulario y te responderemos en la mayor brevedad posible</p>
         </section>
 
           <ContactForm />

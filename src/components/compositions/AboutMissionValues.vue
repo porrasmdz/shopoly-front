@@ -6,11 +6,11 @@ import { mission_familyp, mission_interiorp, mission_materialsp } from "@/consta
     <section class="col-span-12 flex-grow">
         <div class="mt-6 flex flex-col gap-3">
             <CompanyLogo class="mx-auto" :size="'lg'" />
-            <p class="text-center text-sm">Since 1999</p>
+            <p class="text-center text-sm">Desde 1999</p>
         </div>
 
         <div class="mx-auto my-10 flex max-w-[600px] flex-col items-center justify-center px-5">
-            <h2 class="w-full text-left text-xl font-bold">Our Mission:</h2>
+            <h2 class="w-full text-left text-xl font-bold">Nuestra Misión:</h2>
             <p class="py-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
                 placeat odit, est eum dolorem esse totam iusto necessitatibus
@@ -29,7 +29,7 @@ import { mission_familyp, mission_interiorp, mission_materialsp } from "@/consta
                 molestiae nemo distinctio quisquam!
             </p>
 
-            <h2 class="mt-3 w-full text-left text-xl font-bold">Our Vision:</h2>
+            <h2 class="mt-3 w-full text-left text-xl font-bold">Nuestra Visión:</h2>
             <p class="py-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
                 placeat odit, est eum dolorem esse totam iusto necessitatibus
@@ -37,7 +37,7 @@ import { mission_familyp, mission_interiorp, mission_materialsp } from "@/consta
                 molestiae nemo distinctio quisquam!
             </p>
 
-            <h2 class="mt-3 w-full text-left text-xl font-bold">Our Values:</h2>
+            <h2 class="mt-3 w-full text-left text-xl font-bold">Valores:</h2>
             <p class="py-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
                 placeat odit, est eum dolorem esse totam iusto necessitatibus

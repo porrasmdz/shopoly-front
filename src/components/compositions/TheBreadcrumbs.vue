@@ -4,6 +4,18 @@ import { useRoute } from 'vue-router';
 
 const route = useRoute()
 
+const getRouteName = () => {
+  switch(route.name) {
+    case 'Catalog':
+      return 'Catálogo';
+    case 'Cart':
+      return 'Carrito';
+    
+    default:
+      return route.name;
+  }
+}
+
 </script>
 <template>
   <nav class="mx-auto w-full mt-4 max-w-[1200px] px-5">
@@ -18,7 +30,7 @@ const route = useRoute()
         <span class="mx-2 text-gray-500">
           <BaseIcon icon="chevron-right" />
         </span>
-        <span class="text-gray-500">{{route.name}}</span>
+        <span class="text-gray-500">{{getRouteName()}}</span>
 
       </li>
 

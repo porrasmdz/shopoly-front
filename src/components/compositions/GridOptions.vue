@@ -2,7 +2,7 @@
     <div class="mb-5 flex items-center justify-between px-5">
             <div class="flex gap-3">
               <button class="flex items-center justify-center border px-6 py-2">
-                Sort by
+                Filtrar
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

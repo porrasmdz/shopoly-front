@@ -31,15 +31,15 @@ const { items:cartData } = storeToRefs(cartStore());
             <thead class="h-16 bg-neutral-100 dark:bg-gray-800">
               <tr>
                 <th class="text-left pl-6">ITEM</th>
-                <th>PRICE</th>
-                <th>QUANTITY</th>
+                <th>PRECIO</th>
+                <th>CANTIDAD</th>
                 <th>TOTAL</th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
               <!-- 1 -->
-              <div v-if="cartData.length < 1" class="my-12">
+              <div v-if="cartData.length < 1" class="my-12 px-6">
               No hay items todavia
               </div>
               <CartItem  v-for="item in cartData" :key="`lg-${totalItems}`" :order_item="item" />

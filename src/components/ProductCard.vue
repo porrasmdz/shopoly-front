@@ -4,10 +4,12 @@ import BaseButton from '@components/BaseButton.vue';
 import { IItem } from "@/interfaces/IItem";
 import { imgplaceholder } from "@/constants/assets.ts"
 import cartStore from '@/stores/cartStore';
+import { Ref, inject } from 'vue';
 defineProps<{
   product: IItem
 }>()
 
+const triggers = inject<Ref<string[]>>('triggers'); 
 
 const {addItem} = cartStore();
 
@@ -102,7 +104,7 @@ const getPrice = (product: IItem) => {
         <p class="text-sm text-gray-400">({{ product.reviews }})</p>
       </div>
       <div>
-        <BaseButton @click="addItem(product)" type="secondary" class="my-5 h-10 w-full text-white">
+        <BaseButton @click="addItem(product); triggers?.push('success')" type="secondary" class="my-5 h-10 w-full text-white">
           Añadir al carrito
         </BaseButton>
       </div>

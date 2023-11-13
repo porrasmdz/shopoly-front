@@ -39,7 +39,7 @@
 <template>
     
     <footer
-      class="mx-auto w-full max-w-[1200px] justify-between pb-10 flex flex-col lg:flex-row"
+      class="mx-auto w-full max-w-[1200px] justify-between py-10 flex flex-col lg:flex-row"
     >
       <div class="ml-5">
         <CompanyLogo />

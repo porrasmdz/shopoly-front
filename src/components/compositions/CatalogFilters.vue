@@ -7,7 +7,7 @@ import { IAttributeFilter } from "@/interfaces/IAttributeFilter.ts";
 import { IColorFilter } from "@/interfaces/IColorFilter.ts";
 const filters: (IFilter)[] = [
   {
-    title: 'Categories',
+    title: 'Categorías',
     keywords: [{
       key: 'Bedroom',
       results: 12
@@ -28,7 +28,7 @@ const filters: (IFilter)[] = [
 
   } as ICategoryFilter,
   {
-    title: 'Brands',
+    title: 'Marcas',
 
     keywords: [{
       key: 'APEX',
@@ -49,12 +49,12 @@ const filters: (IFilter)[] = [
     type: 'Category'
   } as ICategoryFilter,
   {
-    title: 'Price',
+    title: 'Precio',
     currency: 'dollar',
     type: 'Price'
   } as IPriceFilter,
   {
-    title: 'Size',
+    title: 'Talla',
     keywords: ['XS', 'S', 'M', 'L', 'XL'],
     type: 'Attribute'
   } as IAttributeFilter,
@@ -63,9 +63,6 @@ const filters: (IFilter)[] = [
     keywords: ["Grey", "Indigo", "Maroon"],
     type: 'Color'
   } as IColorFilter,
-
-
-
 ]
 </script>
 <template>
