@@ -19,12 +19,14 @@ onMounted(()=> {
 })
 </script>
 <template>
-    <div v-if="loadingCategories && loadingItems" class="fixed w-full h-full flex justify-center items-center bg-gray-50 dark:bg-gray-950 z-50">
+    
+    <TheHeader  />
+    <TheNavbar />
+    
+    <div v-if="loadingCategories && loadingItems" class="fixed top-0 w-screen h-screen flex justify-center items-center bg-gray-50 dark:bg-gray-950 z-50">
         <LoaderComponent :message="'Cargando algo fantástico...' "/>
     </div>
-    <TheHeader />
-    <TheNavbar />
-    <main v-bind="$attrs" class="mx-auto grid grid-cols-12 min-h-[90vh]">
+    <main v-else v-bind="$attrs" class="mx-auto grid grid-cols-12 min-h-[90vh]">
         
         <slot ></slot>
     </main>

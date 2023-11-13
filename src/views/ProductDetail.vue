@@ -271,9 +271,9 @@ const recommendedProducts: (IProduct)[] = [
 
     <!-- /description  -->
 
-    <p class="col-span-12 w-full mx-auto mt-10 mb-5 max-w-[1200px] px-5">RELATED PRODUCTS</p>
+    <!-- <p class="col-span-12 w-full mx-auto mt-10 mb-5 max-w-[1200px] px-5">RELATED PRODUCTS</p> -->
 
     <!-- Recommendations -->
-    <RecommendedProducts class="col-span-12" :recommended-products="recommendedProducts"/>
+    <!-- <RecommendedProducts class="col-span-12" :recommended-products="recommendedProducts" :max-items="8"/> -->
     <!-- /Recommendations -->
 </template>
