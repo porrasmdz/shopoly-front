@@ -1,6 +1,6 @@
 <script setup lang="ts">
     import CompanyLogo from '@components/CompanyLogo.vue';
-    import GroupedLinks from '@components/compositions/GroupedLinks.vue';
+    // import GroupedLinks from '@components/compositions/GroupedLinks.vue';
     import {linkedin, linkedin_dark, github, github_dark, telegram, telegram_dark} from '@/constants/assets';
     import { useDark } from '@vueuse/core';
 
@@ -14,25 +14,25 @@
         {image: github, link: "https://github.com/JoelVeloz"},
         {image: telegram, link: "https://wa.link/wwzttw"}])
 
-    const footerGroups = [
-        {
-            title: 'CARACTERÍSTICAS',
-            links: [{route: '/', name: 'Marketing'}, {route: '/', name: 'Comercial'}, {route: '/', name: 'Analítica'},{route: '/', name: 'Mercadería'}]
-        },
-        {
-            title: 'SOPORTE',
-            links: [{route: '/', name: 'Precios'}, {route: '/', name: 'Guías'}, {route: '/', name: 'Auditorías'}, {route: '/', name: 'Galería'}]
-        },
-        {
-            title: 'Documentación',
-            links: [{route: '/', name: 'Términos'}, {route: '/', name: 'Condiciones'}, {route: '/', name: 'Privacidad'}, {route: '/', name: 'Licensia'}]
-        },
-        {
-            title: 'Envíos',
-            links: [{route: '/', name: 'Países'}, {route: '/', name: 'Especial'}, {route: '/', name: 'Restricciones'}, {route: '/', name: 'Pagos'}]
-        }
+    // const footerGroups = [
+    //     {
+    //         title: 'CARACTERÍSTICAS',
+    //         links: [{route: '/', name: 'Marketing'}, {route: '/', name: 'Comercial'}, {route: '/', name: 'Analítica'},{route: '/', name: 'Mercadería'}]
+    //     },
+    //     {
+    //         title: 'SOPORTE',
+    //         links: [{route: '/', name: 'Precios'}, {route: '/', name: 'Guías'}, {route: '/', name: 'Auditorías'}, {route: '/', name: 'Galería'}]
+    //     },
+    //     {
+    //         title: 'Documentación',
+    //         links: [{route: '/', name: 'Términos'}, {route: '/', name: 'Condiciones'}, {route: '/', name: 'Privacidad'}, {route: '/', name: 'Licensia'}]
+    //     },
+    //     {
+    //         title: 'Envíos',
+    //         links: [{route: '/', name: 'Países'}, {route: '/', name: 'Especial'}, {route: '/', name: 'Restricciones'}, {route: '/', name: 'Pagos'}]
+    //     }
     
-    ]
+    // ]
 
  
 </script>
@@ -60,10 +60,9 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <!-- <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         <GroupedLinks v-for="(group,index) in footerGroups" :key="`${group.title}-${index}`" :title="group.title" :links="group.links" />
-
-      </div>
+      </div> -->
       
     </footer>
     <!-- /Desktop Footer  -->

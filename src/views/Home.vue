@@ -1,38 +1,32 @@
 <script setup lang="ts">
+//@ts-nocheck
 
-import HomeHero from '@/components/compositions/HomeHero.vue';
-import HomeBadges from '@/components/compositions/HomeBadges.vue';
-import HomeCategories from '@/components/compositions/HomeCategories.vue';
-import HomeSlider from '@/components/compositions/HomeSlider.vue';
-import HomeOffer from '@/components/compositions/HomeOffer.vue';
-import RecommendedProducts from '@components/compositions/RecommendedProducts.vue';
-import { useItem } from '@/composables/useItem';
-import { onMounted } from 'vue';
+import HomeSections from '@/components/compositions/HomeSections.vue';
 
-const { data:productData} = useItem();
-const maxRecommendedItems = 8;
-onMounted(() => {
-})
+import { views } from "@assets/settings.json"
+
+
 </script>
 <template>
-    <HomeHero class="col-span-12" />
+    <!-- <span v-for="(section, index) in views.home.sections" :key="`${section.title}-${index}`">
+        {{section}}
+    </span> -->
+    <HomeSections 
+    v-for="(section, index) in views.home.sections" :key="`${section.title}-${index}`" 
+   :section="section"/>
+    
+    
+    <!-- <HomeHero  class="col-span-12" /> -->
 
-    <HomeBadges class="col-span-12" />
+    <!-- <HomeBadges class="col-span-12" /> -->
 
-    <h2 class="col-span-12 mx-auto mb-5 max-w-[1200px] px-5 flex w-full">
+    <!-- <div class="col-span-12 mx-auto max-w-[1200px] w-full">
+        <h2 class="w-full mb-5 flex px-5">
         COMPRAS POR CATEGORÍA
+        </h2>
+        <HomeCategories class="block" />
+    </div> -->
 
-    </h2>
-    <HomeCategories class="col-span-12" />
+    
 
-    <!-- /Slider  -->
-    <h2 class="col-span-12 mx-auto mt-10 mb-5 max-w-[1200px] px-5 w-full">LO MÁS RECIENTE</h2>
-    <!-- Slider  -->
-
-    <HomeSlider class="col-span-12" />
-    <HomeOffer />
-
-    <p class="col-span-12 mx-auto mt-10 mb-5 max-w-[1200px] px-5">RECOMENDADO PARA TI</p>
-    <RecommendedProducts class="col-span-12" v-if="productData.length > maxRecommendedItems" 
-    :recommended-products="productData" :max-items="maxRecommendedItems" />
 </template>

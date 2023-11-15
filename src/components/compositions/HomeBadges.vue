@@ -2,33 +2,35 @@
 import BaseIcon from '@components/BaseIcon.vue';
 import { IBadge } from "@/interfaces/IBadge.ts";
 
-const badges:(IBadge)[] = [
-  {
-    icon: 'truck',
-    title: 'Envío Gratis',
-    subtitle: 'En compras desde $20',
-  },
+defineProps<{
+  badges: IBadge[]
+}>()
+// const badges:(IBadge)[] = [
+//   {
+//     icon: 'truck',
+//     title: 'Envío Gratis',
+//     subtitle: 'En compras desde $20',
+//   },
 
-  {
-    icon: 'money',
-    title: 'Ámalo o Cámbialo',
-    subtitle: 'Garantía de 30 días',
+//   {
+//     icon: 'money',
+//     title: 'Ámalo o Cámbialo',
+//     subtitle: 'Garantía de 30 días',
 
-  },
+//   },
 
-  {
-    icon: 'help',
-    title: 'Soporte 24/7',
-    subtitle: 'Atención al Cliente',
+//   {
+//     icon: 'help',
+//     title: 'Soporte 24/7',
+//     subtitle: 'Atención al Cliente',
 
-  }
-]
+//   }
+// ]
 </script>
 <template>
   <!-- Cons bages -->
   <section class="col-span-12 container mx-auto my-8 flex flex-col justify-center gap-3 lg:flex-row dark:text-white text-gray-950">
     <!-- 1 -->
-
     <div v-for="badge in badges" :key="`${badge.title}-${badge.subtitle}`"
       class="mx-5 flex flex-row items-center justify-center border-2 border-yellow-400 py-4 px-5">
       <div class="text-indigo-600">

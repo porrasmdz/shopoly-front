@@ -1,0 +1,100 @@
+{
+  "settings": {
+
+  },
+  "views": {
+    "home": {
+      "sections": [
+        {
+          "type": "hero",
+          "title": "¡Los mejores diseños para tu hogar!",
+          "subtitle": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur aperiam natus, nulla, obcaecati nesciunt, itaque adipisci earum ducimus pariatur eaque labore.",
+          "action": "redirect-catalog"
+        },
+        {
+            "type": "badges",
+            "content": [
+              {
+                "icon": "truck",
+                "title": "Envío Gratis",
+                "subtitle": "En compras desde $20"
+              },
+  
+              {
+                "icon": "money",
+                "title": "Ámalo o Cámbialo",
+                "subtitle": "Garantía de 30 días"
+              },
+  
+              {
+                "icon": "help",
+                "title": "Soporte 24/7",
+                "subtitle": "Atención al Cliente"
+              }
+            ]
+        },
+        {
+          "type": "grid",
+          "cells": "6",
+          "title": "COMPRAS POR CATEGORÍA",
+          "model": "categories"
+        },
+        {
+          "type": "slider",
+          "cells": "4",
+          "title": "LO MÁS RECIENTE",
+          "model": "products"
+        },
+        {
+          "type": "banner",
+          "title": "OFERTA DE TEMPORADA",
+          "accent-text": "15% DESCUENTO",
+          "subtitle": "SILLAS DE HOGAR, MESAS Y MANTELES",
+          "action": "redirect-product-detail"
+        },
+        {
+          "type": "grid",
+          "cells": "8",
+          "title": "RECOMENDADO PARA TI",
+          "model": "products"
+        }
+      ]
+    },
+    "catalog": {
+        "sections" : [
+            {
+                "type": "breadcrumbs"
+                
+            },
+            {
+                "type": "catalog"    
+            }
+        ]
+    },
+    "about": {
+        "sections": [
+            {
+            "type": "hero",
+            "title": "¿Quiénes Somos?",
+            "subtitle": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur aperiam natus, nulla, obcaecati nesciunt, itaque adipisci earum ducimus pariatur eaque labore."
+          },
+          {
+            "type": "mission-vision"
+          }
+        ]
+    },
+    "contact": {
+      "sections": [
+        {
+          "type": "hero",
+          "title": "¿Quiénes Somos?",
+          "subtitle": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur aperiam natus, nulla, obcaecati nesciunt, itaque adipisci earum ducimus pariatur eaque labore."
+        },
+        {
+          "type": "contact-form"
+        }
+      ]
+    },
+    "cart": {}
+  }
+}

@@ -17,7 +17,7 @@ import {  RouteLocationNormalized } from "vue-router";
   provide('app:layout', layout)
 </script>
 <template>
-  <component :is="layout || 'div'" class="transition-colors duration-1000">
+  <component :is="layout || 'div'">
     <router-view />
   </component>
 </template>
