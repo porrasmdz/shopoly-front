@@ -7,6 +7,7 @@
       "sections": [
         {
           "type": "hero",
+          "alignment": "left",
           "title": "¡Los mejores diseños para tu hogar!",
           "subtitle": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur aperiam natus, nulla, obcaecati nesciunt, itaque adipisci earum ducimus pariatur eaque labore.",
           "action": "redirect-catalog"
@@ -76,10 +77,48 @@
             {
             "type": "hero",
             "title": "¿Quiénes Somos?",
+            "alignment": "center",
             "subtitle": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur aperiam natus, nulla, obcaecati nesciunt, itaque adipisci earum ducimus pariatur eaque labore."
+          },
+          
+          {
+            "type": "logo",
+            "title": "Desde 1999"
           },
           {
             "type": "mission-vision"
+          },
+          {
+            "type": "text",
+            "title": "Nuestra Misión:",
+            "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum placeat odit, est eum dolorem esse totam iusto necessitatibus eligendi illo doloribus vero aperiam atque tempora repudiandae molestiae nemo distinctio quisquam!"
+          },
+          {
+            "type": "grid",
+            "cells": "3",
+            "title": "",
+            "model": "pictures"
+          },
+          {
+            "type": "text",
+            "title": "",
+            "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum placeat odit, est eum dolorem esse totam iusto necessitatibus eligendi illo doloribus vero aperiam atque tempora repudiandae molestiae nemo distinctio quisquam!"
+          },
+          {
+            "type": "text",
+            "title": "Nuestra Visión:",
+            "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum placeat odit, est eum dolorem esse totam iusto necessitatibus eligendi illo doloribus vero aperiam atque tempora repudiandae molestiae nemo distinctio quisquam!"
+          },
+          {
+            "type": "text",
+            "title": "Valores:",
+            "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum placeat odit, est eum dolorem esse totam iusto necessitatibus eligendi illo doloribus vero aperiam atque tempora repudiandae molestiae nemo distinctio quisquam!"
+          },
+          {
+            "type": "grid",
+            "cells": "3",
+            "title": "",
+            "model": "pictures"
           }
         ]
     },
@@ -87,11 +126,40 @@
       "sections": [
         {
           "type": "hero",
-          "title": "¿Quiénes Somos?",
+          "alignment":"center",
+          "title": "Contáctanos",
           "subtitle": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur aperiam natus, nulla, obcaecati nesciunt, itaque adipisci earum ducimus pariatur eaque labore."
         },
         {
-          "type": "contact-form"
+          "type": "subsidiaries",
+          "content" : [
+            {
+              "name": "Sucursal Gye",
+              "email": "sucursal@delivery.org",
+              "phone_number": "+8(911)339-88-88",
+              "ws_number": "+8(911)339-88-88",
+              "telegram_account": "@sucrusal"
+            },
+            {
+              "name": "Sucursal Sauces",
+              "email": "sucursal@delivery.org",
+              "phone_number": "+8(911)339-88-88",
+              "ws_number": "+8(911)339-88-88",
+              "telegram_account": "@sucrusal"
+            },
+            {
+              "name": "Sucursal La Joya",
+              "email": "sucursal@delivery.org",
+              "phone_number": "+8(911)339-88-88",
+              "ws_number": "+8(911)339-88-88",
+              "telegram_account": "@sucrusal"
+            }
+          ]
+        },
+        {
+          "type": "contact-form",
+          "title": "¿Aún Tienes Dudas?",
+          "subtitle": "Llena el formulario y te responderemos en la mayor brevedad posible"
         }
       ]
     },

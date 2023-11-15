@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import HomeHero from '@/components/compositions/HomeHero.vue';
+import HeroSection from './HeroSection.vue';
 import HomeBadges from '@/components/compositions/HomeBadges.vue';
 import HomeCategories from '@/components/compositions/HomeCategories.vue';
 import HomeSlider from '@/components/compositions/HomeSlider.vue';
@@ -18,8 +18,14 @@ const { data: productData } = useItem();
 const maxRecommendedItems = 8;
 </script>
 <template>
-    <HomeHero v-if="section.type === 'hero'" class="col-span-12" />
-
+    <HeroSection 
+    v-if="section.type==='hero'" 
+    :alignment="section.alignment" 
+    :title="section.title"
+    :subtitle="section.subtitle"
+    :action="section.action" 
+    class="col-span-12" />
+   
     <HomeBadges :badges="section.content" v-else-if="section.type === 'badges'" class="col-span-12 py-12" />
 
     <div v-else-if="section.type === 'grid' && section.model === 'categories'"
