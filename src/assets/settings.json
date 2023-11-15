@@ -1,7 +1,21 @@
 {
   "settings": {
-
-  },
+      "business_name": "Mi tienda",
+      "business_phone": "593978759814",
+      "business_email": null,
+      "facebook_url": null,
+      "instagram_url": null,
+      "tiktok_url": null,
+      "ws_message": "Hola, \u00bfEn qu\u00e9 podemos ayudarte?",
+      "privacy_policies": null,
+      "terms_conditions": null,
+      "frontend_web": "1",
+      "api": "0",
+      "image_logo": "https:\/\/mitienda1.shopoly.store\/api\/files\/Setting\/MhpvUTJz8RZMHVnEN4DnWeVmf76M2mqzaNBVx1Ki.png",
+      "image_favicon": "https:\/\/mitienda1.shopoly.store\/api\/files\/Setting\/mXzaqrtBCMF4padgwb14mjJBAjf53Mig79eYim9s.png",
+      "email_template_welcome_user": null
+  }
+  ,
   "views": {
     "home": {
       "sections": [

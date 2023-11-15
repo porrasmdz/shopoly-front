@@ -5,6 +5,7 @@ import AboutSections from '@/components/compositions/AboutSections.vue';
 
 </script>
 <template>
+    
     <AboutSections v-for="(section, index) in views.about.sections" :key="`${section.type}-${index}`" 
    :section="section"/>
    
