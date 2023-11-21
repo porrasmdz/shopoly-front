@@ -18,7 +18,6 @@ export const useCategory = () => {
           .json()
           .then((resbody) => {
             data.value = resbody.data;
-            console.log(data.value);
             loading.value = false;
           })
           .catch((err) => {
